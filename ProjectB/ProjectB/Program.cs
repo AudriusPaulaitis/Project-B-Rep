@@ -8,6 +8,7 @@ namespace ProjectB
         {
             Console.WriteLine("Hello World!");
             string name = "Hendrik";
+            string name1 = "Audrius";
         }
     }
 }
