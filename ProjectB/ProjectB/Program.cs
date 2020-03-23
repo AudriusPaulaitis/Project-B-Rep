@@ -12,6 +12,7 @@ namespace ProjectB
             string name1 = "Audrius";
 =======
             string name = "Steven";
+            string name = "ali";
 >>>>>>> b5af4b6e3dc12ab83c6e64e66050f32fa9c4a6c6
         }
     }
