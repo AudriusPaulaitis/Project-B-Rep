@@ -12,11 +12,15 @@ namespace Authorisatie
         {
     
             Login login = new Login();
-            bool what = login.loginScreen();
-            if (what == false)
+            bool loginResult = login.loginScreen();
+            if (loginResult == false)
             {
                 Console.WriteLine("Verkeerde inloggegevens");
                 login.loginScreen();
+            }
+            else
+            {
+                return; //Hier komt de verwijzing naar Admin Page
             }
         }
     }
