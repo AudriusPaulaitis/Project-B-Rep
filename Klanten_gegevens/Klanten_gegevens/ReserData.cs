@@ -23,7 +23,7 @@ namespace Klanten_gegevens
             
 
             List<JsonObject> Reserveringen;
-            using (var stream = File.OpenText("DataReservations.json"))
+            using (var stream = File.OpenText("DataReservation.json"))
             {
                 var json = stream.ReadToEnd();
                 Reserveringen = JsonConvert.DeserializeObject<List<JsonObject>>(json);
