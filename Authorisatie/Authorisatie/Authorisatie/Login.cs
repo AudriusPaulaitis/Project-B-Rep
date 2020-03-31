@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +8,15 @@ using Newtonsoft.Json.Linq;
 
 namespace Authorisatie
 { 
+
+
+
+
     class Login
     {
-
+    //Mini Mini database
+        string[] werknemers = new string[] { "#3342", "#4423", "#4552" };
+        string[] wachtwoorden = new string[] { "vasd3", "elle$2", "bolpw4$" };
     //Method voor inlogverificatie
         public bool loginScreen()
         {
@@ -22,32 +27,21 @@ namespace Authorisatie
             Console.Write("Wachtwoord: ");
             string wachtwoord = Console.ReadLine();
 
-            List<Employee> employees;
-            using (var stream = File.OpenText("employees.json"))
+            if (werknemers.Contains(werknemersId) && wachtwoorden.Contains(wachtwoord))
             {
-                var json = stream.ReadToEnd();
-                employees = JsonConvert.DeserializeObject<List<Employee>>(json);
+                int we = Array.IndexOf(werknemers, werknemersId);
+                int wa = Array.IndexOf(wachtwoorden, wachtwoord);
+                if (we == wa)
+                {
+                    return true;
+                }
+                return false;
+            }
+            else
+            {
+                return false;
             }
 
-            //Voor als een employee toegevoegd moet worden
-            //var newEmployee = new Employee
-            //{
-            //    WorkId = "test1",
-            //    Password = "hallo!"
-            //};
-            //employees.Add(newEmployee);
-            //using (var stream = File.CreateText("employees.json"))
-            //{
-            //    stream.Write(JsonConvert.SerializeObject(employees, Formatting.Indented));
-            //}
-
-
-            var employee = employees.FirstOrDefault(emp => emp.WorkId == werknemersId);
-            if (employee == null) return false;
-
-            if (employee.Password != wachtwoord) return false;
-
-            return true;
 
         }
 
