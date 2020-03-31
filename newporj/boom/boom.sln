@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "boom", "boom\boom.csproj", "{A3D4AC0D-70C0-4FFF-B70F-5B066D8C1404}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3D4AC0D-70C0-4FFF-B70F-5B066D8C1404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D4AC0D-70C0-4FFF-B70F-5B066D8C1404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D4AC0D-70C0-4FFF-B70F-5B066D8C1404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D4AC0D-70C0-4FFF-B70F-5B066D8C1404}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
