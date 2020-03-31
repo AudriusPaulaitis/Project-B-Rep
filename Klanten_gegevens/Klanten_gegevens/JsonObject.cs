@@ -6,9 +6,9 @@ namespace Klanten_gegevens
 {
     public class JsonObject
     {
-        public string Naam { get; set; }
-        public int Personen { get; set; }
-        public DateTime Datum { get; set; }
-        public string Melding { get; set; }
+        public string Name { get; set; }
+        public int Persons { get; set; }
+        public DateTime DateAndTime { get; set; }
+        public string Notice { get; set; }
     }
 }

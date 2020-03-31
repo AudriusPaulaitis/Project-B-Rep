@@ -9,8 +9,12 @@ namespace Klanten_gegevens
             ReserData gegevens = new ReserData();
             bool vandaag = gegevens.ReservationScreen();
 
-            string keuze = Console.ReadLine();
-            if (vandaag == false && (keuze == "0"))
+
+            DateReserData datedata = new DateReserData();
+            string check = datedata.ReservationScreenDate();
+
+
+            if (check == "0")
             {
                 gegevens.ReservationScreen();
             }

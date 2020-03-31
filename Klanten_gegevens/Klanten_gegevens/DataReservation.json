@@ -1,46 +1,26 @@
 [
   {
-    "Naam":  "Henk",
-    "Personen": "2",
-    "Datum": "04/01/2020 16:00:00",
-    "Melding": ""
+    "Name":  "Henk",
+    "Persons": "2",
+    "DateAndTime": "2020/04/01 00:00:00",
+    "Notice": ""
   },
   {
-    "Naam": "Ryan",
-    "Personen": "3",
-    "Datum": "03/31/2020 18:30:00",
-    "Melding":
+    "Name": "Ryan",
+    "Persons": "3",
+    "DateAndTime": "2020/03/31 00:00:00",
+    "Notice":"Vegan"
   },
   {
-    "Naam": null,
-    "Personen": null,
-    "Datum": null,
-    "Melding":
+    "Name": "Anna",
+    "Persons": "6",
+    "DateAndTime": "2020/03/31 00:00:00",
+    "Notice": "Ik heb een kind van 3 jaar. Een kindezitje zou het fijn zijn."
   },
   {
-    "Naam": null,
-    "Personen": null,
-    "Datum": null,
-    "Melding":
-  },
-  {
-    "Naam": null,
-    "Personen": null,
-    "Datum": null,
-    "Melding":
-  },
-  {
-    "Naam": null,
-    "Personen": null,
-    "Datum": null,
-    "Melding":
-  },
-  {
-    "Naam": null,
-    "Personen": null,
-    "Datum": null,
-    "Melding":
+    "Name": "Erwin",
+    "Persons": "3",
+    "DateAndTime": "2020/04/01 00:00:00",
+    "Notice": "1 persoon heeft een rolstoel."
   }
-
-
 ]

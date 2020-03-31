@@ -7,18 +7,20 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-
 namespace Klanten_gegevens
 {
-    class ReserData
+    class DateReserData
     {
-        public bool ReservationScreen()
+        public string ReservationScreenDate()
         {
-            DateTime dateNow = DateTime.Today;
+            Console.Write("Vul de datum in (dag-maand-jaar)= ");
+            string dateChoice = Console.ReadLine();
+            DateTime Tijd = DateTime.Parse(dateChoice);
+            string choice1 = "";
 
             Console.WriteLine("Reserveringen");
             Console.WriteLine("--------------------------------------------------------------------------------------");
-            Console.WriteLine("Datum = " + dateNow);
+            Console.WriteLine("Datum = " + Tijd);
             Console.WriteLine("--------------------------------------------------------------------------------------");
             
 
@@ -29,13 +31,15 @@ namespace Klanten_gegevens
                 Reserveringen = JsonConvert.DeserializeObject<List<JsonObject>>(json);
             }
 
-            var dagreservering = Reserveringen.FirstOrDefault( res => res.DateAndTime == dateNow);
+            var dagreservering = Reserveringen.FirstOrDefault( res => res.DateAndTime == Tijd);
             
             if (dagreservering == null)
             {
                 Console.WriteLine("Geen reserveringen vandaag!");
                 Console.WriteLine("--------------------------------------------------------------------------------------");
-                return true;
+                Console.Write("Kies '0' terug te gaan naar vandaag.");
+                choice1 = Console.ReadLine();
+                return choice1;
             }
 
             int aantalRes = 0;
@@ -46,7 +50,11 @@ namespace Klanten_gegevens
                 aantalRes++;
             }
             Console.WriteLine("--------------------------------------------------------------------------------------");
-            return true;
+            Console.WriteLine("Kies '0' terug te gaan naar vandaag.");
+            choice1 = Console.ReadLine();
+            return choice1;
         }
     }
 }
+    
+
