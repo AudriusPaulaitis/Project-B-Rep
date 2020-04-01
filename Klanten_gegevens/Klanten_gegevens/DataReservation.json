@@ -1,26 +1,27 @@
 [
   {
-    "Name":  "Henk",
+    "Name": "Henk",
     "Persons": "2",
     "DateAndTime": "2020/04/01 00:00:00",
     "Notice": ""
+  },
+
+  {
+    "Name": "Erwin",
+    "Persons": "3",
+    "DateAndTime": "2020/04/01 00:00:00",
+    "Notice": "1 persoon heeft een rolstoel."
   },
   {
     "Name": "Ryan",
     "Persons": "3",
     "DateAndTime": "2020/03/31 00:00:00",
-    "Notice":"Vegan"
+    "Notice": "Vegan"
   },
   {
     "Name": "Anna",
     "Persons": "6",
     "DateAndTime": "2020/03/31 00:00:00",
     "Notice": "Ik heb een kind van 3 jaar. Een kindezitje zou het fijn zijn."
-  },
-  {
-    "Name": "Erwin",
-    "Persons": "3",
-    "DateAndTime": "2020/04/01 00:00:00",
-    "Notice": "1 persoon heeft een rolstoel."
   }
 ]
