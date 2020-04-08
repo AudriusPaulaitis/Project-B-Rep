@@ -14,6 +14,7 @@ namespace Klanten_gegevens
     {
         public bool ReservationScreen()
         {
+            //informations for todays reservation
             DateTime dateNow = DateTime.Today;
 
             Console.WriteLine("Reserveringen");
@@ -21,29 +22,33 @@ namespace Klanten_gegevens
             Console.WriteLine("Datum = " + dateNow);
             Console.WriteLine("--------------------------------------------------------------------------------------");
             
-
-            List<JsonObject> Reserveringen;
+            //reading the reservations
+            List<JsonObject> Reservations;
             using (var stream = File.OpenText("DataReservation.json"))
             {
                 var json = stream.ReadToEnd();
-                Reserveringen = JsonConvert.DeserializeObject<List<JsonObject>>(json);
+                Reservations = JsonConvert.DeserializeObject<List<JsonObject>>(json);
             }
 
-            var dagreservering = Reserveringen.FirstOrDefault( res => res.DateAndTime == dateNow);
+            var dayreser = Reservations.FirstOrDefault( res => res.DateAndTime == dateNow);
             
-            if (dagreservering == null)
+            //notifications if there is no reservation
+            if (dayreser == null)
             {
                 Console.WriteLine("Geen reserveringen vandaag!");
                 Console.WriteLine("--------------------------------------------------------------------------------------");
                 return true;
             }
 
-            int aantalRes = 0;
-            while (aantalRes < Reserveringen.Count)
+
+            //counting how many reservations
+            //making list to represent the todays reservations
+            int countRes = 0;
+            while (countRes < Reservations.Count)
             {
-                Console.WriteLine(Reserveringen[aantalRes].Name + "| Aantal= " + Reserveringen[aantalRes].Persons);
-                Console.WriteLine("| Meldingen= " + Reserveringen[aantalRes].Notice);
-                aantalRes++;
+                Console.WriteLine(Reservations[countRes].Name + "| Aantal= " + Reservations[countRes].Persons);
+                Console.WriteLine("| Meldingen= " + Reservations[countRes].Notice);
+                countRes++;
             }
             Console.WriteLine("--------------------------------------------------------------------------------------");
             return true;
