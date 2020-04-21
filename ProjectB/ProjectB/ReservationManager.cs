@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Project_B
+namespace ProjectB
 {   //Steven Ren
     class ReservationManager
     {
