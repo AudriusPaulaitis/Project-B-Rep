@@ -11,14 +11,15 @@ namespace ProjectB_Console
         static int index = 0;
         private static void Main(string[] args)
         {
-            // ik verberg hier de muis en zorg ervoor dat als je de console opstart je gelijk de optie heb uit 3 menu's en de terug knop
+            // ik begin met de output van mijn code neer te zetten in UTF8 anders kan ik de $ teken niet printen, daarna deserialize ik mijn json om zo vervolgens het in een object te kunnen zetten.
+            // daarna zet ik mijn object in een for loop om zo alles in het object te printen.
             Console.OutputEncoding = Encoding.UTF8;
             string jsconfigPath = "jsconfig1.json";
             string jsonDishes = File.ReadAllText(jsconfigPath);
             List<Dish> dishes = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes);
 
 
-
+            // ik verberg hier de muis en zorg ervoor dat als je de console opstart je gelijk de optie heb uit 3 menu's en de terug knop
             Console.CursorVisible = false;
             List<string> KindOfMenu = new List<string>()
             {
