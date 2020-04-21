@@ -86,12 +86,12 @@ namespace Klanten_gegevens
                 return choice1;
             }
 
-            int aantalRes = 0;
-            while (aantalRes < Reservations.Count)
+            int CountRes = 0;
+            while (CountRes < Reservations.Count)
             {
-                Console.WriteLine(Reservations[aantalRes].Name + "| Aantal= " + Reservations[aantalRes].Persons);
-                Console.WriteLine("| Meldingen= " + Reservations[aantalRes].Notice);
-                aantalRes++;
+                Console.WriteLine(Reservations[CountRes].Name + "| Aantal= " + Reservations[CountRes].Persons);
+                Console.WriteLine("| Meldingen= " + Reservations[CountRes].Notice);
+                CountRes++;
             }
             Console.WriteLine("--------------------------------------------------------------------------------------");
             Console.WriteLine("Kies '0' terug te gaan naar vandaag.");
