@@ -332,8 +332,8 @@ namespace ProjectB
             //3 manieren om reservering te vinden.
 
             Console.WriteLine("Op welke manier wilt u de reservering vinden?");
-            Console.WriteLine("Wilt u de reservering vinden op naam, telefoonnummer of datum?");
-            Console.WriteLine("Voor naam voer in 0, voor telefoonnummer voer in 1 en voor datum voer in 2.\n");
+            Console.WriteLine("Wilt u de reservering vinden op naam, telefoonnummer of datum en tijd?");
+            Console.WriteLine("Voor naam voer in 0, voor telefoonnummer voer in 1 en voor datum en tijd voer in 2.\n");
             string findmethod = Console.ReadLine();
             Console.WriteLine();
 
