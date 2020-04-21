@@ -246,7 +246,7 @@ namespace ProjectB
             else if (decision == "2")
             {
                 Console.WriteLine();
-                Console.WriteLine("Type de nieuwe e-mail in.\n");
+                Console.WriteLine("Type het nieuwe e-mail in.\n");
                 string email = Console.ReadLine();
                 currentreservation.email = email;
                 currentreservation.edit = DateTime.Now;
@@ -258,7 +258,7 @@ namespace ProjectB
             {
                 int num;
                 Console.WriteLine();
-                Console.WriteLine("Type uw telefoonnummer in.\n");
+                Console.WriteLine("Type het nieuwe telefoonnummer in.\n");
                 string phonenumber = Console.ReadLine();
                 while (phonenumber.Length != 10 || (!int.TryParse(phonenumber, out num)))
                 {
@@ -292,7 +292,7 @@ namespace ProjectB
             else if (decision == "5")
             {
                 Console.WriteLine();
-                Console.WriteLine("We zijn open van 8:00 tot 22:30. Voer in de tijd van de reservering.\n");
+                Console.WriteLine("We zijn open van 8:00 tot 22:30. Voer de nieuwe tijd van de reservering in.\n");
                 DateTime time;
                 while (true)
                 {
