@@ -22,9 +22,7 @@ namespace Restaurant_Case_Groep1
             switch (Console.ReadLine())
             {
                 case "1":
-                    ReservationManager reservationmanager = new ReservationManager();
-                    reservationmanager.reservationMenu();
-                    break;
+                    //reservation();
                 case "2":
                     Menus menus = new Menus();
                     menus.selectMenu();
