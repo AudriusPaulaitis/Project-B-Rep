@@ -1,37 +1,40 @@
 [
   {
     "Naam": "Gebakken ei",
-    "Prijs": "9$",
+    "Prijs": 9,
     "Beschrijving": "Een lekker smeuig eitje met peper en zout.",
     "Allergenen": "Het gerecht zal ei bevatten, Wel veganistisch"
-  }
+  },
+
   {
-    "Naam": "Club sandwich"
-    "Prijs": "8$"
-    "Beschrijving": "Een lekkere sandwich belegd met ham, ei, sla en mayonaise" 
-    "Allergenen":"Het gerecht zal tarwe en ei bevatten, Niet veganistisch"
-  }
+    "Naam": "Club sandwich",
+    "Prijs": 8,
+    "Beschrijving": "Een lekkere sandwich belegd met ham, ei, sla en mayonaise",
+    "Allergenen": "Het gerecht zal tarwe en ei bevatten, Niet veganistisch"
+  },
+
   {
     "Naam": "Pasta",
-    "Prijs": "12$" ,
-    "Beschrijving":"Een vullende volkoren pasta afgetopt met lekkere tomatensaus" ,
-    "Allergenen":"Het gerecht zal tarwe bevatten, Wel veganistisch"
-  }
+    "Prijs": 12,
+    "Beschrijving": "Een vullende volkoren pasta afgetopt met lekkere tomatensaus",
+    "Allergenen": "Het gerecht zal tarwe bevatten, Wel veganistisch"
+  },
+
   {
     "Naam": "Ramen noodles",
-    "Prijs": "10$",
+    "Prijs": 10,
     "Beschrijving":"Verrukelijke noodles geserveerd met de beste oost indische kruiden",
     "Allergenen":"Het gerecht zal tarwe bevatten, Wel veganistisch"
-  }
+  },
   {
     "Naam": "Teriyaki kip",
-    "Prijs": "17$",
+    "Prijs": 17,
     "Beschrijving": "Deze overheerlijke kip met aziatische kruiden zal een brandend gevoel achter laten op je tong",
     "Allergenen":"Het gerecht kan sporen van melk bevatten, Niet veganistisch"
-  }
+  },
   {
     "Naam": "Dumplings",
-    "Prijs": "9$",
+    "Prijs": 9,
     "Beschrijving": "Lekkere dumplings met een vulling van varkensvlees",
     "Allergenen": "Het gerecht zal tarwe en melk bevatten, Niet veganistisch" 
   }  
