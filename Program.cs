@@ -18,17 +18,20 @@ namespace Restaurant_Case_Groep1
             Console.WriteLine("3) Autorisatiescherm");
             Console.WriteLine("4) Afsluiten");
             Console.Write("\r\nKies een optie: ");
-
+           
             switch (Console.ReadLine())
             {
+                //Gaat naar reserveringsscherm
                 case "1":
                     ReservationManager reservationmanager = new ReservationManager();
                     reservationmanager.reservationMenu();
                     break;
+                //Gaat naar Menu's
                 case "2":
                     Menus menus = new Menus();
                     menus.selectMenu();
                     break;
+                //Gaat naar Loginscherm en dan naar adminpage als login lukt
                 case "3":
                     Login login = new Login();
                     bool result = login.loginScreen();
@@ -42,9 +45,11 @@ namespace Restaurant_Case_Groep1
                         Console.WriteLine("Verkeerde inloggevens!");
                         break;
                     }
+                //Sluit de console
                 case "4":
                     Environment.Exit(0);
                     break;
+                //Als de gekozen optie niet bekend is
                 default:
                     Console.WriteLine("Optie niet bekend");
                     break;
