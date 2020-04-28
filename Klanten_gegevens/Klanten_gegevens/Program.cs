@@ -13,6 +13,12 @@ namespace Klanten_gegevens
             //call reservation screen on chosen date
             string check = start.ReservationScreenDate();
 
+            //going to a table
+            if (check == "1")
+            {
+                check = start.TableOrder();
+                
+            }
             //return to todays reservation
             if (check == "0")
             {

@@ -81,7 +81,8 @@ namespace Klanten_gegevens
             {
                 Console.WriteLine("Geen reserveringen vandaag!");
                 Console.WriteLine("--------------------------------------------------------------------------------------");
-                Console.Write("Kies '0' terug te gaan naar vandaag.");
+                Console.WriteLine("Kies '0' om terug te gaan naar vandaag.");
+                Console.WriteLine("Kies '1' voor de tafels.");
                 choice1 = Console.ReadLine();
                 return choice1;
             }
@@ -97,6 +98,38 @@ namespace Klanten_gegevens
             Console.WriteLine("Kies '0' terug te gaan naar vandaag.");
             choice1 = Console.ReadLine();
             return choice1;
+        }
+
+        //Going to a table to check what they order and how much 
+        public string TableOrder()
+        {
+            Console.WriteLine("Kies een een tafel : ");
+            Console.Write("Tafel ");
+            string Input = Console.ReadLine();
+
+            int CurrentTable;
+            Int32.TryParse(Input, out CurrentTable);
+
+            
+
+            //Checking for the correct table number
+            if (CurrentTable > 0 && (CurrentTable < 15))
+            {
+                Console.WriteLine("--------------------------------------------------------------------------------------");
+                Console.WriteLine("Dit is tafel " + CurrentTable);
+                Console.WriteLine("Bestellingen: ");
+                Console.WriteLine("Bedrag: € ");
+                Console.WriteLine("--------------------------------------------------------------------------------------");
+                Console.WriteLine("Kies '0' terug te gaan naar Reserveringen.");
+                
+            }
+            if(CurrentTable > 15 || CurrentTable < 1)//Table number is not between 1 or 15!
+            {
+                Console.WriteLine("Graag tafel nummer tussen 1 en 15!");
+
+            }
+            //returning 'check' variable 
+            return (Console.ReadLine());
         }
     }
 }
