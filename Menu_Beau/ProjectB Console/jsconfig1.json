@@ -1,14 +1,14 @@
 [
   {
     "Naam": "Gebakken ei",
-    "Prijs": 9,
+    "Prijs": 7,
     "Beschrijving": "Een lekker smeuig eitje met peper en zout.",
     "Allergenen": "Het gerecht zal ei bevatten, Wel veganistisch"
   },
 
   {
     "Naam": "Club sandwich",
-    "Prijs": 8,
+    "Prijs": 6,
     "Beschrijving": "Een lekkere sandwich belegd met ham, ei, sla en mayonaise",
     "Allergenen": "Het gerecht zal tarwe en ei bevatten, Niet veganistisch"
   },

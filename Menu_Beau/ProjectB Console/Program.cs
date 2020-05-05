@@ -11,12 +11,16 @@ namespace ProjectB_Console
         static int index = 0;
         private static void Main(string[] args)
         {
-            // ik begin met de output van mijn code neer te zetten in UTF8 anders kan ik de $ teken niet printen, daarna deserialize ik mijn json om zo vervolgens het in een object te kunnen zetten.
+            // ik begin met de output van mijn code neer te zetten in UTF8 anders kan ik het euro teken niet printen, daarna deserialize ik mijn json om zo vervolgens het in een object te kunnen zetten.
             // daarna zet ik mijn object in een for loop om zo alles in het object te printen.
             Console.OutputEncoding = Encoding.UTF8;
             string jsconfigPath = "jsconfig1.json";
             string jsonDishes = File.ReadAllText(jsconfigPath);
             List<Dish> dishes = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes);
+
+            string jsconfigPath2 = "jsconfig2.json";
+            string jsonDishes2 = File.ReadAllText(jsconfigPath2);
+            List<Dish> dishes2 = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes2);
 
 
             // ik verberg hier de muis en zorg ervoor dat als je de console opstart je gelijk de optie heb uit 3 menu's en de terug knop
@@ -26,6 +30,8 @@ namespace ProjectB_Console
                 "Ochtend",
                 "Middag",
                 "Avond",
+                "Koude dranken",
+                "Warme dranken",
                 "Terug"
             };
 
@@ -55,6 +61,14 @@ namespace ProjectB_Console
                     Console.Clear();
                     Console.WriteLine("Biefstuk                     14$"); Console.Read();
                 }
+                else if (SelectedMenu == "Koude dranken")
+                {
+                    Console.Clear();
+                    foreach (var dish in dishes2)
+                    {
+                        Console.WriteLine(dish);
+                    }
+                }   Console.Read();
             }
         }
         private static string Menu(List<string> KindOfMenu) 

@@ -1,0 +1,92 @@
+[
+  { 
+  "Naam": "Coca-Cola", 
+  "Prijs":3 , 
+  "Beschrijving":"Geserveerd in een glas", 
+  "Allergenen":"Geen" 
+  },
+  {
+  "Naam":"Coca Cola light",
+  "Prijs":3,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+   "Naam": "Coca Cola Zero",
+  "Prijs": 3,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Fanta Orange",
+  "Prijs":3,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Fanta Casis",
+  "Prijs":3,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Sprite",
+  "Prijs":3,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Indian Tonic",
+  "Prijs":3,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Royal Club Bitter Lemon",
+  "Prijs":3,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Spa mineraalwater",
+  "Prijs":2,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Spa bruisend water",
+  "Prijs":2,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Minute Meid Appelsap",
+  "Prijs":2.50,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Lipton Ice Tea Sparkling, Green of Peach",
+  "Prijs":2.75,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Melk,Karnemelk",
+  "Prijs":1.5,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Melk"
+  },
+  {
+  "Naam":"Verse Jus d’Orange",
+  "Prijs":3.5,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Geen"
+  },
+  {
+  "Naam":"Chocomel,Fristi",
+  "Prijs":2.5,
+  "Beschrijving":"Geserveerd in een glas"
+  "Allergenen":"Melk"
+  }
+]
