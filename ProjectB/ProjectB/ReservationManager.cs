@@ -9,9 +9,12 @@ namespace ProjectB
         //Reservering lijst
         public List<Reservation> Reservations = new List<Reservation>();
 
-        //Functie dat reservering aanmaakt / Het vraagt voor details etc. en maakt uiteindelijk een reservering object aan van de RESERVATION class
+    
+
+
+         //Functie dat reservering aanmaakt / Het vraagt voor details etc. en maakt uiteindelijk een reservering object aan van de RESERVATION class
         public void makeReservation()
-        {   //Naam invoer
+        {       //Naam invoer
             Console.WriteLine("Type uw naam in.\n");
             string name = Console.ReadLine();
             while (name.Length < 3 || name.Length > 20)

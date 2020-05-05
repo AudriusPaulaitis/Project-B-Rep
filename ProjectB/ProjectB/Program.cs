@@ -6,8 +6,19 @@ namespace ProjectB
     {
         static void Main(string[] args)
         {
-            ReservationManager reserverationManager = new ReservationManager();
-            reserverationManager.findReservation();
+
+            Reservation yolo = new Reservation()
+
+
+            public void checkReserv()
+            {
+                for (int i = 0; i < Reservations.Count; i++)
+                {
+                    Reservations[i].Print();
+                }
+            }
+
+
         }
     }
 }
