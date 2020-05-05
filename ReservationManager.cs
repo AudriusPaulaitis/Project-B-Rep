@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Restaurant_Case_Groep1
-{
+namespace ProjectB
+{   //Steven Ren
     class ReservationManager
     {
         //Reservering lijst
@@ -17,6 +15,7 @@ namespace Restaurant_Case_Groep1
             Console.WriteLine("Welkom bij het reserveringsscherm. Kies uit de volgende opties:");
             Console.WriteLine("1. Reservering maken ");
             Console.WriteLine("2. Reservering vinden ");
+            Console.WriteLine("3. Print reserveringen van vandaag");
             Console.Write("Optie: ");
             switch (Console.ReadLine())
             {
@@ -26,13 +25,15 @@ namespace Restaurant_Case_Groep1
                 case "2":
                     findReservation();
                     break;
+                case "3":
+                    PrintToday();
+                    break;
 
             }
         }
-
         //Functie dat reservering aanmaakt / Het vraagt voor details etc. en maakt uiteindelijk een reservering object aan van de RESERVATION class
         public void makeReservation()
-        {   //Naam invoerC:\Users\APaul\Desktop\Restaurant Case\Restaurant Case Groep1\Restaurant Case Groep1\ReservationManager.cs
+        {   //Naam invoer
             Console.WriteLine("Type uw naam in.\n");
             string name = Console.ReadLine();
             while (name.Length < 3 || name.Length > 20)
@@ -216,6 +217,17 @@ namespace Restaurant_Case_Groep1
             }
         }
 
+        //Functie dat reserveringen print van vandaag
+        public void PrintToday()
+        {
+            DateTime today = DateTime.Now;
+            foreach (Reservation reservation in Reservations)
+            {
+                reservation.Print();
+                Console.WriteLine();
+            }
+        }
+
         //Functie dat een reservering verwijdert
         public void deleteReservation(Reservation currentreservation, int listnumber)
         {
@@ -353,8 +365,8 @@ namespace Restaurant_Case_Groep1
             //3 manieren om reservering te vinden.
 
             Console.WriteLine("Op welke manier wilt u de reservering vinden?");
-            Console.WriteLine("Wilt u de reservering vinden op naam, telefoonnummer of datum?");
-            Console.WriteLine("Voor naam voer in 0, voor telefoonnummer voer in 1 en voor datum voer in 2.\n");
+            Console.WriteLine("Wilt u de reservering vinden op naam, telefoonnummer of datum en tijd?");
+            Console.WriteLine("Voor naam voer in 0, voor telefoonnummer voer in 1 en voor datum en tijd voer in 2.\n");
             string findmethod = Console.ReadLine();
             Console.WriteLine();
 
