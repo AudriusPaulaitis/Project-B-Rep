@@ -195,6 +195,17 @@ namespace ProjectB
             }
         }
 
+        //Functie dat reserveringen print van vandaag
+        public void PrintToday()
+        {
+            DateTime today = DateTime.Now;
+            foreach (Reservation reservation in Reservations)
+            {
+                reservation.Print();
+                Console.WriteLine();
+            }
+        }
+
         //Functie dat een reservering verwijdert
         public void deleteReservation(Reservation currentreservation, int listnumber)
         {
