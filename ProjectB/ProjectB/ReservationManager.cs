@@ -9,6 +9,28 @@ namespace ProjectB
         //Reservering lijst
         public List<Reservation> Reservations = new List<Reservation>();
 
+        //Reservering navigatie
+        public void reservationMenu()
+        {
+            Console.WriteLine("Welkom bij het reserveringsscherm. Kies uit de volgende opties:");
+            Console.WriteLine("1. Reservering maken ");
+            Console.WriteLine("2. Reservering vinden ");
+            Console.WriteLine("3. Print reserveringen van vandaag");
+            Console.Write("Optie: ");
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    makeReservation();
+                    break;
+                case "2":
+                    findReservation();
+                    break;
+                case "3":
+                    PrintToday();
+                    break;
+
+            }
+        }
         //Functie dat reservering aanmaakt / Het vraagt voor details etc. en maakt uiteindelijk een reservering object aan van de RESERVATION class
         public void makeReservation()
         {   //Naam invoer
