@@ -6,8 +6,9 @@ namespace ProjectB
     {
         static void Main(string[] args)
         {
-            ReservationManager reserverationManager = new ReservationManager();
-            reserverationManager.findReservation();
+            ReservationManager reservationManager = new ReservationManager();
+            reservationManager.makeReservation();
+            reservationManager.PrintToday();
         }
     }
 }

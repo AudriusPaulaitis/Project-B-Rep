@@ -223,8 +223,9 @@ namespace ProjectB
             DateTime today = DateTime.Now;
             foreach (Reservation reservation in Reservations)
             {
-                reservation.Print();
-                Console.WriteLine();
+                if(reservation.date.Day == today.Day)
+                    reservation.Print();
+                    Console.WriteLine();
             }
         }
 
