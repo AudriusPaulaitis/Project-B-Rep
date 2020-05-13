@@ -1,0 +1,56 @@
+[
+  {
+    "Naam": "Pilsner 0,25",
+    "Prijs": 2,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "18 +"
+  },
+  {
+    "Naam": "Heineken",
+    "Prijs": 2,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "18 +"
+  },
+  {
+    "Naam": "Huiswijn wit of rood",
+    "Prijs": 4,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "18 +"
+  },
+  {
+    "Naam": "Tia Maria",
+    "Prijs": 5,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "18 +"
+  },
+  {
+    "Naam": "Baileys",
+    "Prijs": 5,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "18 +"
+  },
+  {
+    "Naam": "Grand Marnier",
+    "Prijs": 5,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "18 +"
+  },
+  {
+    "Naam": "Cointreau",
+    "Prijs": 5,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "18 +"
+  },
+  {
+    "Naam": "Amaretto",
+    "Prijs": 5,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "18 +"
+  },
+  {
+    "Naam": "Dom Benedictine",
+    "Prijs": 5,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "18 +"
+  }
+]
