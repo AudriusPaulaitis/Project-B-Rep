@@ -220,13 +220,30 @@ namespace ProjectB
         //Functie dat reserveringen print van vandaag
         public void PrintToday()
         {
+            //Aangeven de detum van vandaag
             DateTime today = DateTime.Now;
+            Console.WriteLine("Reserveringen");
+            Console.WriteLine("Datum= " + today);
+            Console.WriteLine("--------------------------------------------------");
+
+            bool anyReservation = false;
+
             foreach (Reservation reservation in Reservations)
             {
-                if(reservation.date.Day == today.Day)
+                if (reservation.date.Day == today.Day)
+                {
                     reservation.Print();
                     Console.WriteLine();
+                    anyReservation = true;
+                }
+                if (anyReservation == false)
+                {
+                    Console.WriteLine("Geen reserveringen vandaag!");
+                }
             }
+
+            
+            Console.WriteLine("--------------------------------------------------");
         }
 
         //Functie dat een reservering verwijdert
