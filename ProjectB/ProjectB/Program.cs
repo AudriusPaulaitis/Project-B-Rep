@@ -8,7 +8,7 @@ namespace ProjectB
         {
             ReservationManager reservationManager = new ReservationManager();
             reservationManager.makeReservation();
-            reservationManager.PrintToday();
+            reservationManager.findReservation();
         }
     }
 }

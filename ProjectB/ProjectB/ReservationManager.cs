@@ -1,13 +1,17 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+
 
 namespace ProjectB
 {   //Steven Ren
     class ReservationManager
     {
         //Reservering lijst
-        public List<Reservation> Reservations = new List<Reservation>();
+        //Lijst bestaat uit reserveringen die je haalt van een JSON file. De JSON objecten worden geconvert naar C# Reservation OBJECTS en dat zit dus in de lijst
+        public List<Reservation> Reservations = JsonConvert.DeserializeObject<List<Reservation>>(File.ReadAllText("reservations.json"));
 
         //Reservering navigatie
         public void reservationMenu()
@@ -196,6 +200,11 @@ namespace ProjectB
             if (confirmation == "ja")
             {
                 Reservations.Add(new Reservation(name, email, phonenumber, capacity, new DateTime(2020, month, day, time.Hour, time.Minute, 0)));
+                string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
+                StreamWriter sw = new StreamWriter("reservations.json");
+                sw.WriteLine(jsonstringreservations);
+                sw.Flush();
+                sw.Close();
                 Console.WriteLine();
                 Console.WriteLine("Reservering is aangemaakt.");
                 Console.WriteLine();
@@ -253,6 +262,11 @@ namespace ProjectB
             Reservations.RemoveAt(listnumber);
             currentreservation = null;
             Console.WriteLine("De reservering is sucessvol verwijderd.\n");
+            string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
+            StreamWriter sw = new StreamWriter("reservations.json");
+            sw.WriteLine(jsonstringreservations);
+            sw.Flush();
+            sw.Close();
         }
 
         //Functie dat een reservering bewerkt
@@ -375,7 +389,11 @@ namespace ProjectB
             {
                 Console.WriteLine();
             }
-
+            string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
+            StreamWriter sw = new StreamWriter("reservations.json");
+            sw.WriteLine(jsonstringreservations);
+            sw.Flush();
+            sw.Close();
         }
 
         //Functie dat reserveringen vind op naam/telefoonnummer/datum --- dit leidt ook tot het kiezen van wat je met de reservering wilt doen na het vinden
