@@ -222,6 +222,7 @@ namespace ProjectB
         {
             //Aangeven de detum van vandaag
             DateTime today = DateTime.Now;
+            Console.Clear();
             Console.WriteLine("Reserveringen");
             Console.WriteLine("Datum= " + today);
             Console.WriteLine("--------------------------------------------------");
