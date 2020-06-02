@@ -7,7 +7,6 @@ namespace ProjectB
         static void Main(string[] args)
         {
             ReservationManager reservationManager = new ReservationManager();
-            reservationManager.makeReservation();
             reservationManager.findReservation();
         }
     }
