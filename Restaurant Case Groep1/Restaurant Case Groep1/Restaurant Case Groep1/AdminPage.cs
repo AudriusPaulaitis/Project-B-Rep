@@ -9,6 +9,15 @@ namespace Restaurant_Case_Groep1
 {
 	class AdminPage
 	{
+        public Menus menus;
+        public AdminControle controle;
+
+        public AdminPage(Menus menus)
+        {
+            this.menus = menus;
+            this.controle = new AdminControle(menus);
+        }
+
         public void PrintToday()
         {
             ReservationManager reser = new ReservationManager();

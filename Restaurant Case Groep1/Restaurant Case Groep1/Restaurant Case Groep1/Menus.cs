@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Restaurant_Case_Groep1
 {
-    class Menus
+    public class Menus
     {
         public List<Dish> dishes;
         public List<Dish> dishes2;

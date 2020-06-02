@@ -28,7 +28,7 @@ namespace Restaurant_Case_Groep1
                 ReservationManager reservationManager = new ReservationManager();
                 Menus menus = new Menus();
                 Login login = new Login();
-                AdminPage page = new AdminPage();
+                AdminPage page = new AdminPage(menus);
 
                 if (SelectedOption == "Reserveringsscherm")
                 {

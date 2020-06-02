@@ -4,12 +4,17 @@ using System.Text;
 
 namespace Restaurant_Case_Groep1
 {
-    public class EmptyClass
-    {
+   
         public class AdminControle
         {
+            public Menus menu;
+
+            public AdminControle(Menus menu)
+        {
+            this.menu = menu;
            
-            
+        }
+     
 
             public List<string> Table_1 = new List<string>();
             public List<string> Table_2 = new List<string>();
@@ -47,5 +52,4 @@ namespace Restaurant_Case_Groep1
         }
     }
 
-}
  
