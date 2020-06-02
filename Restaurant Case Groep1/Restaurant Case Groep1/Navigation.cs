@@ -6,27 +6,37 @@ namespace Restaurant_Case_Groep1
 	{
 		public void navigation()
 		{
-            Console.Write("\r\nKies een optie en druk enter: \n");
-            Console.WriteLine("1) Reserveringscherm");
-            Console.WriteLine("2) Menu");
-            Console.WriteLine("3) Autorisatiescherm");
-            Console.WriteLine("4) Afsluiten");
-            Console.Write("\r\nKies een optie: ");
-            // Instances
-            ReservationManager reservationmanager = new ReservationManager();
-            Menus menus = new Menus();
-            Login login = new Login();
-            AdminPage page = new AdminPage();
-
-            switch (Console.ReadLine())
+            Console.CursorVisible = false;
+            List<string> Options = new List<string>()
             {
-                case "1":
-                    reservationmanager.reservationMenu();
-                    break;
-                case "2":
+                "Reserveringsscherm",
+                "Menuscherm",
+                "Inlogscherm",
+                "Exit"
+            };
+
+            while (true)
+            {
+                string SelectedOption = Selector(Options);
+                ReservationManager reservationmanager = new ReservationManager();
+                Menus menus = new Menus();
+                Login login = new Login();
+                AdminPage page = new AdminPage();
+                if (SelectedMenu == "Reserveringsscherm")
+                {
+                    Console.Clear();
+                    reservationmanager.ReservationMenu();
+                    Console.Read();
+                }
+                else if (SelectedMenu == "Menuscherm")
+                {
+                    Console.Clear();
                     menus.menuStart();
-                    break;
-                case "3":
+                    Console.Read();
+                }
+                else if (SelectedMenu == "Inlogscherm") 
+                {
+                    Console.Clear();
                     bool result = login.loginScreen();
                     if (result == true)
                     {
@@ -34,19 +44,50 @@ namespace Restaurant_Case_Groep1
                         Console.ReadLine();
                         break;
                     }
-                    else
-                    {
-                        Console.WriteLine("Verkeerde inloggevens!");
-                        break;
-                    }
-                case "4":
+                }
+                else if (SelectedMenu == "Exit")
+                {
                     Environment.Exit(0);
-                    break;
-                default:
-                    Console.WriteLine("Optie niet bekend");
-                    break;
+                }
             }
+
         }
-	}
+        public string Selector(List<string> Options)
+        {
+            for (int i = 0; i < Options.Count; i = i + 1)
+            {
+                if (i == index)
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine(Options[i]);
+                }
+                else
+                {
+                    Console.WriteLine(Options[i]);
+                }
+                Console.ResetColor();
+            }
+            ConsoleKeyInfo PressedKey = Console.ReadKey();
+            Console.Clear();
+            if (PressedKey.Key == ConsoleKey.UpArrow)
+            {
+                index -= 1;
+            }
+            else if (PressedKey.Key == ConsoleKey.DownArrow)
+            {
+                index += 1;
+            }
+            else if (PressedKey.Key == ConsoleKey.Enter)
+            {
+                return Options[index];
+            }
+            else
+            {
+                return "";
+            }
+            return "";
+        }
+    }
 }
 
