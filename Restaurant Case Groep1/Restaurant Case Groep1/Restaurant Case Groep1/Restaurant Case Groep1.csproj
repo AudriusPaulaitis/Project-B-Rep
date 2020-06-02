@@ -49,7 +49,9 @@
     <Compile Include="AdminPage.cs" />
     <Compile Include="Reservation.cs" />
     <Compile Include="ReservationManager.cs" />
-    <Compile Include="Menus.cs" />
+    <Compile Include="Menus.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Dish.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Login.cs" />
@@ -61,12 +63,24 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="employees.json" />
-    <None Include="jsconfig4.json" />
-    <None Include="jsconfig5.json" />
-    <None Include="jsconfig2.json" />
-    <None Include="jsconfig6.json" />
-    <None Include="jsconfig1.json" />
-    <None Include="jsconfig3.json" />
+    <None Include="jsconfig4.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="jsconfig5.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="jsconfig2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="jsconfig6.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="jsconfig1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="jsconfig3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
