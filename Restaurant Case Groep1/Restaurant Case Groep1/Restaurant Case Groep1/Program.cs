@@ -12,6 +12,7 @@ namespace Restaurant_Case_Groep1
         // In de main kan de user door verschillende keuzes navigeren
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Navigation nav = new Navigation();
             nav.navigation();
         }

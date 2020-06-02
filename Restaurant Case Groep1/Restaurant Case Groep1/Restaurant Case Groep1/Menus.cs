@@ -8,7 +8,42 @@ namespace Restaurant_Case_Groep1
 {
     class Menus
     {
+        public List<Dish> dishes;
+        public List<Dish> dishes2;
+        public List<Dish> dishes3;
+        public List<Dish> dishes4;
+        public List<Dish> dishes5;
+        public List<Dish> dishes6;
+
         static int index = 0;
+
+        public Menus()
+        {
+            string jsconfigPath = "jsconfig1.json";
+            Console.WriteLine(File.Exists(jsconfigPath));
+            string jsonDishes = File.ReadAllText(jsconfigPath);
+            dishes = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes);
+
+            string jsconfigPath2 = "jsconfig2.json";
+            string jsonDishes2 = File.ReadAllText(jsconfigPath2);
+            dishes2 = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes2);
+
+            string jsconfigPath3 = "jsconfig3.json";
+            string jsonDishes3 = File.ReadAllText(jsconfigPath3);
+            dishes3 = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes3);
+
+            string jsconfigPath4 = "jsconfig4.json";
+            string jsonDishes4 = File.ReadAllText(jsconfigPath4);
+            dishes4 = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes4);
+
+            string jsconfigPath5 = "jsconfig5.json";
+            string jsonDishes5 = File.ReadAllText(jsconfigPath5);
+            dishes5 = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes5);
+
+            string jsconfigPath6 = "jsconfig6.json";
+            string jsonDishes6 = File.ReadAllText(jsconfigPath6);
+            dishes6 = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes6);
+        }
         public void menuStart()
         {
             Console.Clear();
@@ -16,7 +51,7 @@ namespace Restaurant_Case_Groep1
             Console.WriteLine("----------");
             // ik begin met de output van mijn code neer te zetten in UTF8 anders kan ik het euro teken niet printen, daarna deserialize ik mijn json om zo vervolgens het in een object te kunnen zetten.
             // daarna zet ik mijn object in een for loop om zo alles in het object te printen.
-            Console.OutputEncoding = Encoding.UTF8;
+            
             string jsconfigPath = "jsconfig1.json";
             string jsonDishes = File.ReadAllText(jsconfigPath);
             List<Dish> dishes = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes);

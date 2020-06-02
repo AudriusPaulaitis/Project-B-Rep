@@ -28,6 +28,7 @@ namespace Restaurant_Case_Groep1
                 {
                     reservation.Print();
                     Console.WriteLine();
+                    Console.WriteLine("########################");
                     anyReservation = true;
                 }
                 //als vandaag geen reserveringen zijn
