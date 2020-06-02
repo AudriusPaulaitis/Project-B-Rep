@@ -38,12 +38,16 @@ namespace Restaurant_Case_Groep1
                 {
                     Console.Clear();
                     bool result = login.loginScreen();
-                    if (result == true)
+                    if (result == true) 
                     {
                         page.PrintToday();
                         Console.ReadLine();
-                        break;
                     }
+                    else 
+                    {
+                        Console.WriteLine("Verkeerde inloggegevens");
+                    }
+
                 }
                 else if (SelectedMenu == "Exit")
                 {
