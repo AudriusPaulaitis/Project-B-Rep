@@ -1,0 +1,82 @@
+[
+  {
+    "Naam": "Gebakken ei",
+    "Prijs": 7,
+    "Beschrijving": "Een lekker smeuig eitje met peper en zout.",
+    "Allergenen": "Het gerecht zal ei bevatten, Wel veganistisch"
+  },
+
+  {
+    "Naam": "Club sandwich",
+    "Prijs": 6,
+    "Beschrijving": "Een lekkere sandwich belegd met ham, ei, sla en mayonaise",
+    "Allergenen": "Het gerecht zal tarwe en ei bevatten, Niet veganistisch"
+  },
+
+  {
+    "Naam": "Pasta",
+    "Prijs": 9,
+    "Beschrijving": "Een vullende volkoren pasta afgetopt met lekkere tomatensaus",
+    "Allergenen": "Het gerecht zal tarwe bevatten, Wel veganistisch"
+  },
+
+  {
+    "Naam": "Ramen noodles",
+    "Prijs": 10,
+    "Beschrijving":"Verrukelijke noodles geserveerd met de beste oost indische kruiden",
+    "Allergenen":"Het gerecht zal tarwe bevatten, Wel veganistisch"
+  },
+  {
+    "Naam": "Uitsmijter",
+    "Prijs": 8,
+    "Beschrijving": "Een heerlijke uitsmijter met bacon",
+    "Allergenen":"Het gerecht kan sporen van melk bevatten, Niet veganistisch"
+  },
+  {
+    "Naam": "Toscaanse tomatensoep",
+    "Prijs": 9,
+    "Beschrijving": "Een romige soep gevuld met pesto, room en knoflookcroutons",
+    "Allergenen": "Het gerecht zal tarwe en melk bevatten, Niet veganistisch"
+  },
+  {
+    "Naam": "Maaltijdsalade",
+    "Prijs": 14,
+    "Beschrijving": "Een verrukelijke salade met een lekker mals stukje kipfilet",
+    "Allergenen": "Het gerecht kan sporen van kip bevatten, Niet veganistisch"
+  },
+  {
+    "Naam": "Broodje kaas",
+    "Prijs": 6,
+    "Beschrijving": "Een bruine bol gevuld met de lekkere 50+ kaas",
+    "Allergenen": "Het gerecht zal sporen van melk en tarwe bevatten, Niet veganistisch"
+  },
+  {
+    "Naam": " Carpaccio",
+    "Prijs": 10,
+    "Beschrijving": "Een flinterdunne carpaccio met een heerlijke dressing",
+    "Allergenen": "Het gerecht bevat geen allergenen, Niet veganistisch"
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

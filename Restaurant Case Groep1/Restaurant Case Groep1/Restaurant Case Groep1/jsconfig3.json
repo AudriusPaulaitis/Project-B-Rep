@@ -1,0 +1,62 @@
+[
+  {
+    "Naam": "Warme Chocomelk",
+    "Prijs": 3,
+    "Beschrijving": "Vers en warm geserveerd!",
+    "Allergenen": "Melk"
+  },
+  {
+    "Naam": "Thee (divere smaken Pure Tea 100%)",
+    "Prijs": 2,
+    "Beschrijving": "Vers en warm geserveerd!",
+    "Allergenen": "Geen"
+  },
+  {
+    "Naam": "Koffie",
+    "Prijs": 2,
+    "Beschrijving": "Vers en warm geserveerd!",
+    "Allergenen": "Geen"
+  },
+  {
+    "Naam": "Cappuccino",
+    "Prijs": 3,
+    "Beschrijving": "Vers en warm geserveerd!",
+    "Allergenen": "Warm"
+  },
+  {
+    "Naam": "Espresso/Ristretto",
+    "Prijs": 3,
+    "Beschrijving": "Vers en warm geserveerd!",
+    "Allergenen": "Geen"
+  },
+  {
+    "Naam": "Dubbele Espresso Of Ristretto",
+    "Prijs": 3,
+    "Beschrijving": "Vers en warm geserveerd!",
+    "Allergenen": "Geen"
+  },
+  {
+    "Naam": "Koffie Verkeerd",
+    "Prijs": 3,
+    "Beschrijving": "Vers en warm geserveerd!",
+    "Allergenen": "Melk"
+  },
+  {
+    "Naam": "Latte Machiato",
+    "Prijs": 3,
+    "Beschrijving": "Vers en warm geserveerd!",
+    "Allergenen": "Geen"
+  },
+  {
+    "Naam": "Wiener Melange",
+    "Prijs": 3,
+    "Beschrijving": "Vers en warm geserveerd!",
+    "Allergenen": "Geen"
+  },
+  {
+    "Naam": "Verse Munt- of Gemberthee",
+    "Prijs": 2,
+    "Beschrijving": "Vers en warm geserveerd!",
+    "Allergenen": "Geen"
+  }
+]
