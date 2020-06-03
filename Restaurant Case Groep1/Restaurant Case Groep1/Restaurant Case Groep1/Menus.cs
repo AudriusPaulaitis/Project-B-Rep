@@ -46,7 +46,6 @@ namespace Restaurant_Case_Groep1
         }
         public void menuStart()
         {
-            Console.Clear();
             Console.WriteLine("Menuscherm");
             Console.WriteLine("----------");
             // ik begin met de output van mijn code neer te zetten in UTF8 anders kan ik het euro teken niet printen, daarna deserialize ik mijn json om zo vervolgens het in een object te kunnen zetten.
@@ -97,12 +96,10 @@ namespace Restaurant_Case_Groep1
                 Console.WriteLine("Menuscherm");
                 Console.WriteLine("----------");
                 string SelectedMenu = Menu(KindOfMenu);
-                ConsoleKeyInfo PressedKey = Console.ReadKey(true);
                 Navigation navigationM = new Navigation();
                 if (SelectedMenu == "Ochtend")
                 {
                     Console.Clear();
-                    Console.WriteLine("Druk op 'Esc' om terug te gaan");
                     foreach (var dish in dishes)
                     {
                         Console.WriteLine(dish);
@@ -112,11 +109,11 @@ namespace Restaurant_Case_Groep1
                 else if (SelectedMenu == "Terug")
                 {
                     navigationM.navigation();
+                    Console.Read();
                 }
                 else if (SelectedMenu == "Middag")
                 {
                     Console.Clear();
-                    Console.WriteLine("Druk op 'Esc' om terug te gaan");
                     foreach (var dish in dishes5)
                     {
                         Console.WriteLine(dish);
@@ -126,7 +123,6 @@ namespace Restaurant_Case_Groep1
                 else if (SelectedMenu == "Avond")
                 {
                     Console.Clear();
-                    Console.WriteLine("Druk op 'Esc' om terug te gaan");
                     foreach (var dish in dishes6)
                     {
                         Console.WriteLine(dish);
@@ -136,7 +132,6 @@ namespace Restaurant_Case_Groep1
                 else if (SelectedMenu == "Koude dranken")
                 {
                     Console.Clear();
-                    Console.WriteLine("Druk op 'Esc' om terug te gaan");
                     foreach (var dish in dishes2)
                     {
                         Console.WriteLine(dish);
@@ -146,7 +141,6 @@ namespace Restaurant_Case_Groep1
                 else if (SelectedMenu == "Warme dranken")
                 {
                     Console.Clear();
-                    Console.WriteLine("Druk op 'Esc' om terug te gaan");
                     foreach (var dish in dishes3)
                     {
                         Console.WriteLine(dish);
@@ -156,7 +150,6 @@ namespace Restaurant_Case_Groep1
                 else if (SelectedMenu == "Alcoholische dranken")
                 {
                     Console.Clear();
-                    Console.WriteLine("Druk op 'Esc' om terug te gaan");
                     foreach (var dish in dishes4)
                     {
                         Console.WriteLine(dish);
@@ -168,7 +161,7 @@ namespace Restaurant_Case_Groep1
         }
         private static string Menu(List<string> KindOfMenu) 
         {
-            for (int i = 0; i < KindOfMenu.Count; i = i + 1)
+            for (int i = 0; i < KindOfMenu.Count; i++)
             {   // hier geef ik een aparte kleur aan de gekozen menu om het zo overzichtelijker te maken
                 if (i == index)
                 {
@@ -187,11 +180,11 @@ namespace Restaurant_Case_Groep1
             // Met pressedkey navigeer je door het menu, als je klikt op de pijltoetsen verranderd de index en zo ook het gekozen menu
             if (PressedKey.Key == ConsoleKey.UpArrow)
             {
-                index = index - 1;
+                index -= 1;
             }
             else if (PressedKey.Key == ConsoleKey.DownArrow)
             {
-                index = index + 1;
+                index += 1;
             }
             else if (PressedKey.Key == ConsoleKey.Enter)
             {

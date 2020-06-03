@@ -26,6 +26,9 @@ namespace Restaurant_Case_Groep1
 
             while (true)
             {
+                Console.Clear();
+                Console.WriteLine("Menuscherm");
+                Console.WriteLine("----------");
                 string SelectedOption = Selector(Options);
                 ReservationManager reservationManager = new ReservationManager();
                 Menus menus = new Menus();
@@ -85,11 +88,11 @@ namespace Restaurant_Case_Groep1
             }
             ConsoleKeyInfo PressedKey = Console.ReadKey();
             Console.Clear();
-            if (PressedKey.Key == ConsoleKey.UpArrow && index >= 0)
+            if (PressedKey.Key == ConsoleKey.UpArrow)
             {
                 index -= 1;
             }
-            else if (PressedKey.Key == ConsoleKey.DownArrow && index < Options.Count)
+            else if (PressedKey.Key == ConsoleKey.DownArrow)
             {
                 index += 1;
             }
