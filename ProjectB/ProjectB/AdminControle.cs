@@ -32,9 +32,9 @@ namespace ProjectB
             Console.WriteLine("Selecteer een tafel (tafel 1- 15");
             int TableChoise = Console.Read();
             Console.WriteLine("--------------------------------------");
-            Console.WriteLine("Wat wil u doen?");
-            Console.WriteLine("Kies 1 om bestellingen op te nemen, kies 2 om bestelling te verwijderen,");
-            Console.WriteLine("kies 3 om de tafel vrij te maken of kies 0 om terug te gaan.");
+            Console.WriteLine("Kies 1 om bestellingen op te nemen");
+            Console.WriteLine("Kies 2 om bestelling te verwijderen");
+            Console.WriteLine("Kies 3 om de tafel vrij te maken of kies 0 om terug te gaan.");
             int ChoiseOrder = Console.Read();
 
         }

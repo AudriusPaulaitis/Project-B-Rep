@@ -9,6 +9,15 @@ namespace Restaurant_Case_Groep1
 {
 	class AdminPage
 	{
+        public Menus menus;
+        public AdminControle controle;
+
+        public AdminPage(Menus menus)
+        {
+            this.menus = menus;
+            this.controle = new AdminControle(menus);
+        }
+
         public void PrintToday()
         {
             ReservationManager reser = new ReservationManager();
@@ -28,6 +37,7 @@ namespace Restaurant_Case_Groep1
                 {
                     reservation.Print();
                     Console.WriteLine();
+                    Console.WriteLine("########################");
                     anyReservation = true;
                 }
                 //als vandaag geen reserveringen zijn

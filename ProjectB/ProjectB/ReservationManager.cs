@@ -153,7 +153,7 @@ namespace ProjectB
 
             //Tijd
 
-            Console.WriteLine();
+            Console.Clear();
             Console.WriteLine("We zijn open van 8:00 tot 22:30. Voer in de tijd van de reservering.\n");
             DateTime time;
             while (true)
@@ -205,12 +205,13 @@ namespace ProjectB
                 sw.WriteLine(jsonstringreservations);
                 sw.Flush();
                 sw.Close();
-                Console.WriteLine();
+                Console.Clear();
                 Console.WriteLine("Reservering is aangemaakt.");
                 Console.WriteLine();
             }
             else
             {
+                Console.Clear();
                 makeReservation();
             }
 
@@ -261,6 +262,7 @@ namespace ProjectB
         {
             Reservations.RemoveAt(listnumber);
             currentreservation = null;
+            Console.Clear();
             Console.WriteLine("De reservering is sucessvol verwijderd.\n");
             string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
             StreamWriter sw = new StreamWriter("reservations.json");
@@ -272,6 +274,7 @@ namespace ProjectB
         //Functie dat een reservering bewerkt
         public void editReservation(Reservation currentreservation)
         {
+            Console.Clear();
             Console.WriteLine("Huidige gegevens.\n");
             currentreservation.Print();
             Console.WriteLine("\nAls u iets wil veranderen kies dan een van deze opties.\n1: Naam\n2: E-mail\n3: Telefoonnummer\n4: Aantal personen\n5: Tijd van reservering\nAls u niks wilt veranderen kies dan 0.\n");
@@ -409,6 +412,7 @@ namespace ProjectB
 
             while (findmethod != "0" && findmethod != "1" && findmethod != "2")
             {
+                Console.WriteLine();
                 Console.WriteLine("Voer alstublieft 0, 1 of 2 in.");
                 findmethod = Console.ReadLine();
             }
@@ -428,6 +432,7 @@ namespace ProjectB
                 {
                     if (name == Reservations[i].name)
                     {
+                        Console.Clear();
                         Console.WriteLine("Dit is wat er is gevonden.");
                         Console.WriteLine();
                         Reservations[i].Print();
@@ -492,6 +497,7 @@ namespace ProjectB
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("We hebben geen reservering gevonden op die naam.");
                     Console.WriteLine("Probeer alstublieft opnieuw of kies een ander optie van vinden.");
                     Console.WriteLine();
@@ -514,6 +520,7 @@ namespace ProjectB
                 {
                     if (phonenumber == Reservations[i].phonenumber)
                     {
+                        Console.Clear();
                         Console.WriteLine("Dit is wat er is gevonden.");
                         Console.WriteLine();
                         Reservations[i].Print();
@@ -578,6 +585,7 @@ namespace ProjectB
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("We hebben geen reservering gevonden op die telefoonnummer.");
                     Console.WriteLine("Probeer alstublieft opnieuw of kies een ander optie van vinden.");
                     Console.WriteLine();
@@ -614,6 +622,7 @@ namespace ProjectB
                 {
                     if (date == Reservations[i].date)
                     {
+                        Console.Clear();
                         Console.WriteLine("Dit is wat er is gevonden.");
                         Console.WriteLine();
                         Reservations[i].Print();
@@ -679,6 +688,7 @@ namespace ProjectB
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("We hebben geen reservering gevonden op die datum en tijd.");
                     Console.WriteLine("Probeer alstublieft opnieuw of kies een ander optie van vinden.");
                     Console.WriteLine();
