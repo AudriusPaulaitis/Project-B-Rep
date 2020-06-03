@@ -44,7 +44,7 @@ namespace Restaurant_Case_Groep1
                 }
                 else if (SelectedOption == "Loginscherm")
                 {
-                    if (login.loginScreen() == true)
+                    if (login.loginScreen())
                     {
                         page.PrintToday();
                         Console.Read();
