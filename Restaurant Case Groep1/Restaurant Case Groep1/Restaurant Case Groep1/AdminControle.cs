@@ -12,7 +12,8 @@ namespace Restaurant_Case_Groep1
             public AdminControle(Menus menu)
         {
             this.menu = menu;
-           
+        
+            
         }
      
 
