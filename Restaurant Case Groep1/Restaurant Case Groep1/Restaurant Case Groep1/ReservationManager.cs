@@ -44,6 +44,7 @@ namespace Restaurant_Case_Groep1
                 else if (SelectedOption == "Terug")
                 {
                     navigation.navigation();
+                    Console.Read();
                 }
 
             }

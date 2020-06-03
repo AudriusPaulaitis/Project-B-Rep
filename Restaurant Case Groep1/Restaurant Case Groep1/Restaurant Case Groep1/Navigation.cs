@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading;
 
 namespace Restaurant_Case_Groep1
 {
@@ -10,6 +11,7 @@ namespace Restaurant_Case_Groep1
         int index = 0;
 		public void navigation()
 		{
+            start:
             Console.Clear();
             Console.WriteLine("Navigatiescherm");
             Console.WriteLine("---------------");
@@ -42,13 +44,16 @@ namespace Restaurant_Case_Groep1
                 }
                 else if (SelectedOption == "Loginscherm")
                 {
-                    if (login.loginScreen())
+                    if (login.loginScreen() == true)
                     {
                         page.PrintToday();
+                        Console.Read();
                     }
                     else 
                     {
                         Console.WriteLine("Verkeerde inloggevens");
+                        Thread.Sleep(5000);
+                        goto start;
                     }
 
                 }
