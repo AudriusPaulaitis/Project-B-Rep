@@ -26,14 +26,14 @@ namespace Restaurant_Case_Groep1
 
             while (true)
             {
-                Console.Clear();
-                Console.WriteLine("Navigatiescherm");
-                Console.WriteLine("----------");
-                string SelectedOption = Selector(Options);
                 ReservationManager reservationManager = new ReservationManager();
                 Menus menus = new Menus();
                 Login login = new Login();
                 AdminPage page = new AdminPage(menus);
+                Console.Clear();
+                Console.WriteLine("Navigatiescherm");
+                Console.WriteLine("----------");
+                string SelectedOption = Selector(Options);
 
                 if (SelectedOption == "Reserveringsscherm")
                 {
