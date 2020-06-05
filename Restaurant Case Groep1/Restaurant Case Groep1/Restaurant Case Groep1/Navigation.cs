@@ -27,7 +27,7 @@ namespace Restaurant_Case_Groep1
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Menuscherm");
+                Console.WriteLine("Navigatiescherm");
                 Console.WriteLine("----------");
                 string SelectedOption = Selector(Options);
                 ReservationManager reservationManager = new ReservationManager();
@@ -69,9 +69,6 @@ namespace Restaurant_Case_Groep1
         }
         public string Selector(List<string> Options)
         {
-            Console.Clear();
-            Console.WriteLine("Navigatiescherm");
-            Console.WriteLine("---------------");
             for (int i = 0; i < Options.Count; i++)
             {
                 if (i == index)
@@ -88,13 +85,21 @@ namespace Restaurant_Case_Groep1
             }
             ConsoleKeyInfo PressedKey = Console.ReadKey();
             Console.Clear();
-            if (PressedKey.Key == ConsoleKey.UpArrow)
+            if (PressedKey.Key == ConsoleKey.UpArrow && index >= 0)
             {
                 index -= 1;
             }
-            else if (PressedKey.Key == ConsoleKey.DownArrow)
+            else if (index < 0) 
+            {
+                index = 0;
+            }
+            else if (PressedKey.Key == ConsoleKey.DownArrow && index < Options.Count)
             {
                 index += 1;
+            }
+            else if (index > Options.Count - 1) 
+            {
+                index = Options.Count - 1;
             }
             else if (PressedKey.Key == ConsoleKey.Enter)
             {
