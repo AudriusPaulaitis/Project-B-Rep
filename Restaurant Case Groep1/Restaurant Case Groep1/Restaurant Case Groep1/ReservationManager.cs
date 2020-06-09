@@ -102,12 +102,14 @@ namespace Restaurant_Case_Groep1
         {   //Naam invoerC:\Users\APaul\Desktop\Restaurant Case\Restaurant Case Groep1\Restaurant Case Groep1\ReservationManager.cs
             Console.WriteLine("Type uw naam in.\n");
             string name = Console.ReadLine();
+            Console.WriteLine();
             while (name.Length < 3 || name.Length > 20)
             {
                 if (name.Length < 3)
                 {
-                    Console.WriteLine("Type uw naam in.\n");
+                    Console.WriteLine("Type een langere naam in alstublieft.\n");
                     name = Console.ReadLine();
+                    Console.WriteLine();
                 }
                 else
                 {
@@ -115,36 +117,63 @@ namespace Restaurant_Case_Groep1
                     name = Console.ReadLine();
                 }
             }
-
+            Console.Clear();
             //E-mail invoer
             Console.WriteLine();
             Console.WriteLine("Type uw e-mail in.\n");
             string email = Console.ReadLine();
+            char[] emailverify = email.ToCharArray();
+            while (!(emailverify.Contains('@')))
+            {
+                Console.WriteLine();
+                Console.WriteLine("Uw e-mail moet @ bevatten. Type uw e-mail alstublieft opnieuw in.");
+                Console.WriteLine();
+                email = Console.ReadLine();
+                emailverify = email.ToCharArray();
+            }
+
+
+            Console.Clear();
 
             //Telefoonnummer invoer
             int num;
-            Console.WriteLine();
             Console.WriteLine("Type uw telefoonnummer in.\n");
             string phonenumber = Console.ReadLine();
             while (phonenumber.Length != 10 || (!int.TryParse(phonenumber, out num)))
             {
-                Console.WriteLine("Type een correct telefoonnummer in.\n");
-                phonenumber = Console.ReadLine();
+                Console.WriteLine();
+                if (!int.TryParse(phonenumber, out num))
+                {
+                    Console.WriteLine("Een telefoonnummer bevat alleen nummers, type alstublieft een telefoonnummer in met 10 nummers.\n");
+                    phonenumber = Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("Type een telefoonnummer in met 10 nummers alstublieft.\n");
+                    phonenumber = Console.ReadLine();
+                }
             }
-
+            Console.Clear();
             //Aantal personen reservering
             Console.WriteLine();
             Console.WriteLine("Voor hoeveel personen is de reservering? U kunt kiezen uit: 2 / 3 / 4 / 5\n");
             string capacitynum = Console.ReadLine();
             while (!int.TryParse(capacitynum, out num) || (capacitynum != "2" && capacitynum != "3" && capacitynum != "4" && capacitynum != "5"))
-            {
-                Console.WriteLine("Type een correct nummer in.\n");
-                capacitynum = Console.ReadLine();
-            }
+                if (!int.TryParse(capacitynum, out num))
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("U kunt alleen de nummers: 2/3/4/5 invoeren en geen andere tekens.");
+                    Console.WriteLine("Voer alstublieft een correct nummer in.\n");
+                    capacitynum = Console.ReadLine();
+                }
+            Console.WriteLine();
+            Console.WriteLine("U kunt alleen kiezen uit: 2/3/4/5");
+            Console.WriteLine("Voer alstublieft een correct nummer in.\n");
             int capacity = Int32.Parse(capacitynum);
 
             //Tijd maand / dag / uur
             //Dictionary voor maand kiezen 
+            Console.Clear();
             Console.WriteLine();
             Dictionary<string, int> monthdic = new Dictionary<string, int>
             {
@@ -162,34 +191,30 @@ namespace Restaurant_Case_Groep1
                 {"december", 12 }
             };
 
-            Console.WriteLine("Voor welk maand reserveert u?\n");
-            string monthnum = Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Voor welk maand reserveert u?\nU kunt de naam van de maand invoeren. Bijvoorbeeld: januari.\n");
+            string monthnumverify = Console.ReadLine();
+            string monthnum = monthnumverify.ToLower();
             int month = 13;
             while (month > 12 || month <= 0)
             {
+                Console.WriteLine();
                 if (monthdic.ContainsKey(monthnum))
                 {
                     month = monthdic[monthnum];
                 }
                 else
                 {
-                    Console.WriteLine("Voer een correct maand in.\n");
-                    monthnum = Console.ReadLine();
+                    Console.Clear();
+                    Console.WriteLine($"{monthnumverify} is geen geldig maand.\nDit zijn de geldige maanden die u kunt invoeren.\n");
+                    Console.WriteLine("januari\nfebruari\nmaart\napril\nmei\njuni\njuli\naugustus\nseptember\noktober\nnovember\ndecember\n");
+                    monthnumverify = Console.ReadLine();
+                    monthnum = monthnumverify.ToLower();
                 }
             }
-
-            //Dag
-            Console.WriteLine();
-            Console.WriteLine($"Voor welke dag van {monthnum} wilt u reserveren?\n");
-            string daynum = Console.ReadLine();
-            while ((!int.TryParse(daynum, out num)))
-            {
-                Console.WriteLine($"{daynum} {monthnum} bestaat niet. Voer alstublieft een valide dag in voor {monthnum}.\n");
-                daynum = Console.ReadLine();
-            }
-
+            Console.Clear();
             int days = 0;
-
+                
             //Checkt hoeveel dagen er in de maand zijn
             if (monthnum == "februari")
             {
@@ -203,11 +228,16 @@ namespace Restaurant_Case_Groep1
             {
                 days = 31;
             }
-
-            //Checkt of die dag wel bestaat in de maand
-            while (Int32.Parse(daynum) <= 0 || Int32.Parse(daynum) > days)
+            Console.Clear();
+            //Checkt of die dag wel bestaat in de maand en kijkt ook naar invoer fouten.
+            Console.WriteLine($"Voor welke dag van {monthnum} wilt u reserveren?\nU kunt de dagen 1 - {days} invoeren.");
+            Console.WriteLine();
+            string daynum = Console.ReadLine();
+            while ((!int.TryParse(daynum, out num)) || Int32.Parse(daynum) <= 0 || Int32.Parse(daynum) > days)
             {
-                Console.WriteLine($"{daynum} {monthnum} bestaat niet. Voer alstublieft een valide dag in voor {monthnum}.\n");
+                Console.Clear();
+                Console.WriteLine($"{daynum} {monthnum} bestaat niet. Voer alstublieft een valide dag in voor {monthnum}.\n Voor {monthnum} kunt u 1 - {days} invoeren.");
+                Console.WriteLine();
                 daynum = Console.ReadLine();
             }
 
@@ -215,12 +245,13 @@ namespace Restaurant_Case_Groep1
 
             //Tijd
 
-            Console.WriteLine();
-            Console.WriteLine("We zijn open van 8:00 tot 22:30. Voer in de tijd van de reservering.\n");
+            Console.Clear();
+            Console.WriteLine("We zijn open van 8:00 tot 22:30. Voer in de tijd van de reservering in HH:MM formaat.\n");
             DateTime time;
             while (true)
             {
                 string timestr = Console.ReadLine();
+                Console.WriteLine();
                 if (!DateTime.TryParse(timestr, out time))
                 {
                     Console.WriteLine("Tijd moet in formaat HH:MM, HH moet onder 25 zijn en MM moet onder 60 zijn.\n");
@@ -232,7 +263,7 @@ namespace Restaurant_Case_Groep1
                 else if (time.Minute % 5 != 0)
                 {
                     Console.WriteLine($"{time.ToString("HH:mm")} is niet beschikbaar.");
-                    Console.WriteLine($"Keuze uit {time.Hour}:00 , {time.Hour}:05, {time.Hour}:10, {time.Hour}:15 enzovoort.\n");
+                    Console.WriteLine($"Keuze uit {time.Hour}:00 , {time.Hour}:05, {time.Hour}:10, {time.Hour}:15 enzovoort met intervallen van 5 minuten.\n");
                 }
                 else
                 {
@@ -241,7 +272,7 @@ namespace Restaurant_Case_Groep1
             }
 
             //Bevestiging
-            Console.WriteLine();
+            Console.Clear();
             Console.WriteLine("Zijn deze gegevens correct?");
             Console.WriteLine($"Naam: {name}");
             Console.WriteLine($"E-mail: {email}");
@@ -301,13 +332,14 @@ namespace Restaurant_Case_Groep1
 
             if (decision == "1")
             {
+                Console.WriteLine();
                 Console.WriteLine("Type de nieuwe naam in.\n");
                 string name = Console.ReadLine();
                 while (name.Length < 3 || name.Length > 20)
                 {
                     if (name.Length < 3)
                     {
-                        Console.WriteLine("Type uw naam in.\n");
+                        Console.WriteLine("Type een langere naam in alstublieft.\n");
                         name = Console.ReadLine();
                     }
                     else
@@ -327,6 +359,15 @@ namespace Restaurant_Case_Groep1
                 Console.WriteLine();
                 Console.WriteLine("Type het nieuwe e-mail in.\n");
                 string email = Console.ReadLine();
+                char[] emailverify = email.ToCharArray();
+                while (!(emailverify.Contains('@')))
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Uw e-mail moet @ bevatten. Type uw e-mail alstublieft opnieuw in.");
+                    Console.WriteLine();
+                    email = Console.ReadLine();
+                    emailverify = email.ToCharArray();
+                }
                 currentreservation.email = email;
                 currentreservation.edit = DateTime.Now;
                 editReservation(currentreservation);
@@ -341,8 +382,17 @@ namespace Restaurant_Case_Groep1
                 string phonenumber = Console.ReadLine();
                 while (phonenumber.Length != 10 || (!int.TryParse(phonenumber, out num)))
                 {
-                    Console.WriteLine("Type een correct telefoonnummer in.\n");
-                    phonenumber = Console.ReadLine();
+                    Console.WriteLine();
+                    if (!int.TryParse(phonenumber, out num))
+                    {
+                        Console.WriteLine("Een telefoonnummer bevat alleen nummers, type alstublieft een telefoonnummer in met 10 nummers.\n");
+                        phonenumber = Console.ReadLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Type een telefoonnummer in met 10 nummers alstublieft.\n");
+                        phonenumber = Console.ReadLine();
+                    }
                 }
                 currentreservation.phonenumber = phonenumber;
                 currentreservation.edit = DateTime.Now;
@@ -358,7 +408,16 @@ namespace Restaurant_Case_Groep1
                 string capacitynum = Console.ReadLine();
                 while (!int.TryParse(capacitynum, out num) || (capacitynum != "2" && capacitynum != "3" && capacitynum != "4" && capacitynum != "5"))
                 {
-                    Console.WriteLine("Type een correct nummer in.\n");
+                    while (!int.TryParse(capacitynum, out num))
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("U kunt alleen de nummers: 2/3/4/5 invoeren en geen andere tekens.");
+                        Console.WriteLine("Voer alstublieft een correct nummer in.\n");
+                        capacitynum = Console.ReadLine();
+                    }
+                    Console.WriteLine();
+                    Console.WriteLine("U kunt alleen kiezen uit: 2/3/4/5");
+                    Console.WriteLine("Voer alstublieft een correct nummer in.\n");
                     capacitynum = Console.ReadLine();
                 }
                 int capacity = Int32.Parse(capacitynum);
@@ -371,11 +430,12 @@ namespace Restaurant_Case_Groep1
             else if (decision == "5")
             {
                 Console.WriteLine();
-                Console.WriteLine("We zijn open van 8:00 tot 22:30. Voer de nieuwe tijd van de reservering in.\n");
+                Console.WriteLine("We zijn open van 8:00 tot 22:30. Voer de nieuwe tijd van de reservering in HH:MM formaat.\n");
                 DateTime time;
                 while (true)
                 {
                     string timestr = Console.ReadLine();
+                    Console.WriteLine();
                     if (!DateTime.TryParse(timestr, out time))
                     {
                         Console.WriteLine("Tijd moet in formaat HH:MM, HH moet onder 25 zijn en MM moet onder 60 zijn.\n");
@@ -387,7 +447,7 @@ namespace Restaurant_Case_Groep1
                     else if (time.Minute % 5 != 0)
                     {
                         Console.WriteLine($"{time.ToString("HH:mm")} is niet beschikbaar.");
-                        Console.WriteLine($"Keuze uit {time.Hour}:00 , {time.Hour}:05, {time.Hour}:10, {time.Hour}:15 enzovoort.\n");
+                        Console.WriteLine($"Keuze uit {time.Hour}:00 , {time.Hour}:05, {time.Hour}:10, {time.Hour}:15 enzovoort met intervallen van 5 minuten.\n");
                     }
                     else
                     {
@@ -410,15 +470,14 @@ namespace Restaurant_Case_Groep1
         {
             //3 manieren om reservering te vinden.
 
-            Console.WriteLine("Op welke manier wilt u de reservering vinden?");
-            Console.WriteLine("Wilt u de reservering vinden op naam, telefoonnummer of datum?");
+            Console.WriteLine("Op welke manier wilt u de reservering vinden?\n");
+            Console.WriteLine("Wilt u de reservering vinden op naam, telefoonnummer of datum en tijd?\n");
             Console.WriteLine("Voor naam voer in 0, voor telefoonnummer voer in 1 en voor datum voer in 2.\n");
             string findmethod = Console.ReadLine();
-            Console.WriteLine();
 
             while (findmethod != "0" && findmethod != "1" && findmethod != "2")
             {
-                Console.WriteLine("Voer alstublieft 0, 1 of 2 in.");
+                Console.WriteLine("Voer alstublieft alleen 0, 1 of 2 in. Andere tekens zijn niet toegestaan.\n");
                 findmethod = Console.ReadLine();
             }
 
@@ -426,7 +485,8 @@ namespace Restaurant_Case_Groep1
             {
                 //Methode op naam
 
-                Console.WriteLine("Wat is de naam van de persoon die de reservering heeft gereserveerd?");
+                Console.Clear();
+                Console.WriteLine("Onder welke naam staat de reservering?\nLet op het is hoofdletter gevoelig dus voer alstublieft de naam precies in.");
                 Console.WriteLine();
                 string name = Console.ReadLine();
                 Console.WriteLine();
@@ -511,7 +571,7 @@ namespace Restaurant_Case_Groep1
             {
 
                 //Methode op telefoonnummer
-
+                Console.Clear();
                 Console.WriteLine("Wat is de telefoonnummer van de persoon die de reservering heeft gereserveerd?");
                 Console.WriteLine();
                 string phonenumber = Console.ReadLine();
@@ -595,6 +655,7 @@ namespace Restaurant_Case_Groep1
             }
             else //Datum tijd manier
             {
+                Console.Clear();
                 DateTime date;
                 Console.WriteLine("Type in de datum en tijd van de reservering in formaat: YY-MM-DD HH:MM");
                 Console.WriteLine("Bijvoorbeeld: 2020-12-21 18:30");
@@ -608,6 +669,7 @@ namespace Restaurant_Case_Groep1
                     string dateinput = Console.ReadLine();
                     if (!DateTime.TryParse(dateinput, out date))
                     {
+                        Console.WriteLine();
                         Console.WriteLine("Datum en tijd moet in formaat YY-MM-DD HH:MM.");
                         Console.WriteLine();
                     }
