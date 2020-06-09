@@ -180,11 +180,25 @@ namespace Restaurant_Case_Groep1
             // Met pressedkey navigeer je door het menu, als je klikt op de pijltoetsen verranderd de index en zo ook het gekozen menu
             if (PressedKey.Key == ConsoleKey.UpArrow)
             {
-                index -= 1;
+                if (index == 0)
+                {
+
+                }
+                else
+                {
+                    index--;
+                }
             }
             else if (PressedKey.Key == ConsoleKey.DownArrow)
             {
-                index += 1;
+                if (index == KindOfMenu.Count - 1)
+                {
+
+                }
+                else
+                {
+                    index++;
+                }
             }
             else if (PressedKey.Key == ConsoleKey.Enter)
             {

@@ -70,21 +70,27 @@ namespace Restaurant_Case_Groep1
             }
             ConsoleKeyInfo PressedKey = Console.ReadKey();
             Console.Clear();
-            if (PressedKey.Key == ConsoleKey.UpArrow && index >= 0)
+            if (PressedKey.Key == ConsoleKey.UpArrow)
             {
-                index -= 1;
+                if (index == 0)
+                {
+
+                }
+                else
+                {
+                    index--;
+                }
             }
-            else if (index < 0)
+            else if (PressedKey.Key == ConsoleKey.DownArrow)
             {
-                index = 0;
-            }
-            else if (PressedKey.Key == ConsoleKey.DownArrow && index < ResOptions.Count)
-            {
-                index += 1;
-            }
-            else if (index > ResOptions.Count - 1)
-            {
-                index = ResOptions.Count - 1;
+                if (index == ResOptions.Count - 1)
+                {
+
+                }
+                else
+                {
+                    index++;
+                }
             }
             else if (PressedKey.Key == ConsoleKey.Enter)
             {
