@@ -1,59 +1,69 @@
 [
   {
+    "GerechtId": 49,
     "Naam": "Warme Chocomelk",
     "Prijs": 3,
     "Beschrijving": "Vers en warm geserveerd!",
     "Allergenen": "Melk"
   },
   {
+    "GerechtId": 50,
     "Naam": "Thee (divere smaken Pure Tea 100%)",
     "Prijs": 2,
     "Beschrijving": "Vers en warm geserveerd!",
     "Allergenen": "Geen"
   },
   {
+    "GerechtId": 51,
     "Naam": "Koffie",
     "Prijs": 2,
     "Beschrijving": "Vers en warm geserveerd!",
     "Allergenen": "Geen"
   },
   {
+    "GerechtId": 52,
     "Naam": "Cappuccino",
     "Prijs": 3,
     "Beschrijving": "Vers en warm geserveerd!",
     "Allergenen": "Warm"
   },
   {
+    "GerechtId": 53,
     "Naam": "Espresso/Ristretto",
     "Prijs": 3,
     "Beschrijving": "Vers en warm geserveerd!",
     "Allergenen": "Geen"
   },
   {
+    "GerechtId": 54,
     "Naam": "Dubbele Espresso Of Ristretto",
     "Prijs": 3,
     "Beschrijving": "Vers en warm geserveerd!",
     "Allergenen": "Geen"
   },
   {
+    "GerechtId": 55,
     "Naam": "Koffie Verkeerd",
     "Prijs": 3,
     "Beschrijving": "Vers en warm geserveerd!",
     "Allergenen": "Melk"
   },
   {
+    "GerechtId": 56,
     "Naam": "Latte Machiato",
     "Prijs": 3,
     "Beschrijving": "Vers en warm geserveerd!",
     "Allergenen": "Geen"
   },
   {
+    "GerechtId": 57,
     "Naam": "Wiener Melange",
     "Prijs": 3,
     "Beschrijving": "Vers en warm geserveerd!",
     "Allergenen": "Geen"
   },
   {
+    "GerechtId": 58,
     "Naam": "Verse Munt- of Gemberthee",
     "Prijs": 2,
     "Beschrijving": "Vers en warm geserveerd!",

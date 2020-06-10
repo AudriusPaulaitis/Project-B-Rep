@@ -1,53 +1,62 @@
 [
   {
+    "GerechtId": 59,
     "Naam": "Pilsner 0,25",
     "Prijs": 2,
     "Beschrijving": "Geserveerd in een glas",
     "Allergenen": "18 +"
   },
   {
+    "GerechtId": 60,
     "Naam": "Heineken",
     "Prijs": 2,
     "Beschrijving": "Geserveerd in een glas",
     "Allergenen": "18 +"
   },
   {
+    "GerechtId": 61,
     "Naam": "Huiswijn wit of rood",
     "Prijs": 4,
     "Beschrijving": "Geserveerd in een glas",
     "Allergenen": "18 +"
   },
   {
+    "GerechtId": 62,
     "Naam": "Tia Maria",
     "Prijs": 5,
     "Beschrijving": "Geserveerd in een glas",
     "Allergenen": "18 +"
   },
   {
+    "GerechtId": 63,
     "Naam": "Baileys",
     "Prijs": 5,
     "Beschrijving": "Geserveerd in een glas",
     "Allergenen": "18 +"
   },
   {
+    "GerechtId": 64,
     "Naam": "Grand Marnier",
     "Prijs": 5,
     "Beschrijving": "Geserveerd in een glas",
     "Allergenen": "18 +"
   },
   {
+    "GerechtId": 65,
     "Naam": "Cointreau",
     "Prijs": 5,
     "Beschrijving": "Geserveerd in een glas",
     "Allergenen": "18 +"
   },
   {
+    "GerechtId": 66,
     "Naam": "Amaretto",
     "Prijs": 5,
     "Beschrijving": "Geserveerd in een glas",
     "Allergenen": "18 +"
   },
   {
+    "GerechtId": 67,
     "Naam": "Dom Benedictine",
     "Prijs": 5,
     "Beschrijving": "Geserveerd in een glas",

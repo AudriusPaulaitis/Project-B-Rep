@@ -1,92 +1,107 @@
 [
-  { 
-    "Naam": "Coca-Cola", 
-    "Prijs":3 , 
-    "Beschrijving":"Geserveerd in een glas", 
-    "Allergenen":"Geen" 
+  {
+    "GerechtId": 34,
+    "Naam": "Coca-Cola",
+    "Prijs": 3,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Coca Cola light",
-    "Prijs":3,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 35,
+    "Naam": "Coca Cola light",
+    "Prijs": 3,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
+    "GerechtId": 36,
     "Naam": "Coca Cola Zero",
     "Prijs": 3,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Fanta Orange",
-    "Prijs":3,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 37,
+    "Naam": "Fanta Orange",
+    "Prijs": 3,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Fanta Casis",
-    "Prijs":3,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 38,
+    "Naam": "Fanta Casis",
+    "Prijs": 3,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Sprite",
-    "Prijs":3,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 39,
+    "Naam": "Sprite",
+    "Prijs": 3,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Indian Tonic",
-    "Prijs":3,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 40,
+    "Naam": "Indian Tonic",
+    "Prijs": 3,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Royal Club Bitter Lemon",
-    "Prijs":3,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 41,
+    "Naam": "Royal Club Bitter Lemon",
+    "Prijs": 3,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Spa mineraalwater",
-    "Prijs":2,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 42,
+    "Naam": "Spa mineraalwater",
+    "Prijs": 2,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Spa bruisend water",
-    "Prijs":2,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 43,
+    "Naam": "Spa bruisend water",
+    "Prijs": 2,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Minute Meid Appelsap",
-    "Prijs":2,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 44,
+    "Naam": "Minute Meid Appelsap",
+    "Prijs": 2,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Lipton Ice Tea Sparkling, Green of Peach",
-    "Prijs":3,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 45,
+    "Naam": "Lipton Ice Tea Sparkling, Green of Peach",
+    "Prijs": 3,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Melk,Karnemelk",
-    "Prijs":2,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Melk"
+    "GerechtId": 46,
+    "Naam": "Melk,Karnemelk",
+    "Prijs": 2,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Melk"
   },
   {
-    "Naam":"Verse Jus d'Orange",
-    "Prijs":3,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Geen"
+    "GerechtId": 47,
+    "Naam": "Verse Jus d'Orange",
+    "Prijs": 3,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Geen"
   },
   {
-    "Naam":"Chocomel,Fristi",
-    "Prijs":2,
-    "Beschrijving":"Geserveerd in een glas",
-    "Allergenen":"Melk"
+    "GerechtId": 48,
+    "Naam": "Chocomel,Fristi",
+    "Prijs": 2,
+    "Beschrijving": "Geserveerd in een glas",
+    "Allergenen": "Melk"
   }
 ]

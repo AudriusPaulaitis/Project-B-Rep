@@ -1,67 +1,78 @@
 [
   {
+    "GerechtId": 23,
     "Naam": "Biefstuk",
     "Prijs": 17,
     "Beschrijving": "Heerlijk malse biefstuk die word geserveerd met een lekkere jus",
     "Allergenen": "Het gerecht kan melk bevatten, Niet veganistisch"
   },
   {
+    "GerechtId": 24,
     "Naam": "Peking eend",
-    "Prijs":16,
+    "Prijs": 16,
     "Beschrijving": "Dit heerlijke gerecht staat bekend om zijn dunne en knaperige vel.",
     "Allergenen": "Het gerecht kan melk bevatten, Niet veganistisch"
   },
   {
+    "GerechtId": 25,
     "Naam": "Spaghetti bolognese",
-    "Prijs":13,
+    "Prijs": 13,
     "Beschrijving": "Een heerlijke pasta met bolognese saus en gehaktballen",
     "Allergenen": "Het gerecht bevat tarwe, Niet veganistisch"
   },
   {
+    "GerechtId": 26,
     "Naam": "BBQ chicken",
-    "Prijs":13,
+    "Prijs": 13,
     "Beschrijving": "Een heerlijke kipfilet rechstreeks van de BBQ",
     "Allergenen": "Het gerecht bevat melk, Niet veganistisch"
   },
   {
+    "GerechtId": 27,
     "Naam": "Tonijn steak",
-    "Prijs":12,
+    "Prijs": 12,
     "Beschrijving": "Een lekker groot stuk tonijn, altijd vers gevangen",
     "Allergenen": "Het gerecht bevat geen allergenen, Niet veganistisch"
   },
   {
+    "GerechtId": 28,
     "Naam": "Mixed grill",
-    "Prijs":18,
+    "Prijs": 18,
     "Beschrijving": "De mixed grill bestaat uit verschillende stukjes vlees met elk aparte kruide",
     "Allergenen": "Dit gerecht kan melk bevatten, Niet veganistisch"
   },
   {
+    "GerechtId": 29,
     "Naam": "Boerenschnitzel",
-    "Prijs":9,
+    "Prijs": 9,
     "Beschrijving": "Een lekkere schnitzel met een krokant jasje",
     "Allergenen": "Het gerecht bevat tarwe en melk, Niet veganistisch"
   },
   {
+    "GerechtId": 30,
     "Naam": "Spare ribs",
-    "Prijs":12,
+    "Prijs": 12,
     "Beschrijving": "Een lekkere spare ribs met een zoet zure saus",
     "Allergenen": "Het gerect bevat melk, Niet veganistisch"
   },
   {
+    "GerechtId": 31,
     "Naam": "Asian curry",
-    "Prijs":10,
+    "Prijs": 10,
     "Beschrijving": "Deze verukkelijke curry met aziatische kruiden zal je niet snel vergeten",
     "Allergenen": "Dit gerecht bevat geen allergenen, Niet veganistisch"
   },
   {
+    "GerechtId": 32,
     "Naam": "Tortelini",
-    "Prijs":11,
+    "Prijs": 11,
     "Beschrijving": "Deze tortelini is stevig gevuld met kaas en spinazie",
     "Allergenen": "Dit gerecht bevat tarwe en melk, Niet veganistisch"
   },
   {
+    "GerechtId": 33,
     "Naam": "Rotti",
-    "Prijs":6,
+    "Prijs": 6,
     "Beschrijving": "De klassieke rotti opnieuw uitgevonden door onze chef",
     "Allergenen": "Dit gerecht bevat tarwe, Niet veganistisch"
   }
