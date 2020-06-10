@@ -23,14 +23,14 @@
   {
     "Naam": "Ramen noodles",
     "Prijs": 10,
-    "Beschrijving":"Verrukelijke noodles geserveerd met de beste oost indische kruiden",
-    "Allergenen":"Het gerecht zal tarwe bevatten, Wel veganistisch"
+    "Beschrijving": "Verrukelijke noodles geserveerd met de beste oost indische kruiden",
+    "Allergenen": "Het gerecht zal tarwe bevatten, Wel veganistisch"
   },
   {
     "Naam": "Uitsmijter",
     "Prijs": 8,
     "Beschrijving": "Een heerlijke uitsmijter met bacon",
-    "Allergenen":"Het gerecht kan sporen van melk bevatten, Niet veganistisch"
+    "Allergenen": "Het gerecht kan sporen van melk bevatten, Niet veganistisch"
   },
   {
     "Naam": "Toscaanse tomatensoep",
@@ -60,7 +60,7 @@
 
 
 
-
+   
 
 
 

@@ -6,87 +6,63 @@
     "Allergenen": "Het gerecht kan melk bevatten, Niet veganistisch"
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Naam": "Peking eend",
+    "Prijs":16,
+    "Beschrijving": "Dit heerlijke gerecht staat bekend om zijn dunne en knaperige vel.",
+    "Allergenen": "Het gerecht kan melk bevatten, Niet veganistisch"
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Naam": "Spaghetti bolognese",
+    "Prijs":13,
+    "Beschrijving": "Een heerlijke pasta met bolognese saus en gehaktballen",
+    "Allergenen": "Het gerecht bevat tarwe, Niet veganistisch"
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Naam": "BBQ chicken",
+    "Prijs":13,
+    "Beschrijving": "Een heerlijke kipfilet rechstreeks van de BBQ",
+    "Allergenen": "Het gerecht bevat melk, Niet veganistisch"
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Naam": "Tonijn steak",
+    "Prijs":12,
+    "Beschrijving": "Een lekker groot stuk tonijn, altijd vers gevangen",
+    "Allergenen": "Het gerecht bevat geen allergenen, Niet veganistisch"
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Naam": "Mixed grill",
+    "Prijs":18,
+    "Beschrijving": "De mixed grill bestaat uit verschillende stukjes vlees met elk aparte kruide",
+    "Allergenen": "Dit gerecht kan melk bevatten, Niet veganistisch"
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Naam": "Boerenschnitzel",
+    "Prijs":9,
+    "Beschrijving": "Een lekkere schnitzel met een krokant jasje",
+    "Allergenen": "Het gerecht bevat tarwe en melk, Niet veganistisch"
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Naam": "Spare ribs",
+    "Prijs":12,
+    "Beschrijving": "Een lekkere spare ribs met een zoet zure saus",
+    "Allergenen": "Het gerect bevat melk, Niet veganistisch"
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Naam": "Asian curry",
+    "Prijs":10,
+    "Beschrijving": "Deze verukkelijke curry met aziatische kruiden zal je niet snel vergeten",
+    "Allergenen": "Dit gerecht bevat geen allergenen, Niet veganistisch"
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Naam": "Tortelini",
+    "Prijs":11,
+    "Beschrijving": "Deze tortelini is stevig gevuld met kaas en spinazie",
+    "Allergenen": "Dit gerecht bevat tarwe en melk, Niet veganistisch"
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
-  },
-  {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
-  },
-  {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
-  },
-  {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
-  },
-  {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Naam": "Rotti",
+    "Prijs":6,
+    "Beschrijving": "De klassieke rotti opnieuw uitgevonden door onze chef",
+    "Allergenen": "Dit gerecht bevat tarwe, Niet veganistisch"
   }
 ]

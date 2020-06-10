@@ -6,85 +6,85 @@
     "Allergenen": "Afhankelijk van de pizza kan het gerecht vlees bevatten, Niet veganistisch behalve de vegetariana"
   },
   {
-    "Naam": "",
+    "Naam": "Caeser salade",
+    "Prijs":1,
+    "Beschrijving": "Een verfrissende salade met een vleugje citroen",
+    "Allergenen": "Bevat geen allergenen, Niet veganistisch"
+  },
+  {
+    "Naam": "Mexicaanse tosti",
+    "Prijs":1,
+    "Beschrijving": "Een tosti gevuld met mexicaans gekruid vlees",
+    "Allergenen": "Dit gerecht bevat tarwe, Niet veganistisch"
+  },
+  {
+    "Naam": "Stokbrood gevuld met mozarella",
+    "Prijs":1,
+    "Beschrijving": "Een lekkere stokbrood gevuld met mozarella",
+    "Allergenen": "Dit gerecht bevat tarwe, Wel veganistisch"
+  },
+  {
+    "Naam": "Waldorf salade",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
   },
   {
-    "Naam": "",
+    "Naam": "Broodje rundercarpaccio",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
   },
   {
-    "Naam": "",
+    "Naam": "Wrap gevuld met kip",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
   },
   {
-    "Naam": "",
+    "Naam": "Salade met gerookte zalm",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
   },
   {
-    "Naam": "",
+    "Naam": "Broodje met eigen gemaakte kroket",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
   },
   {
-    "Naam": "",
+    "Naam": "Broodje gezond",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
   },
   {
-    "Naam": "",
+    "Naam": "Zeeplateau",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
   },
   {
-    "Naam": "",
+    "Naam": "Zukade bitterbal",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
   },
   {
-    "Naam": "",
+    "Naam": "Dim sum",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
   },
   {
-    "Naam": "",
+    "Naam": "Gamba piri piri",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
   },
   {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
-  },
-  {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
-  },
-  {
-    "Naam": "",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
-  },
-  {
-    "Naam": "",
+    "Naam": "Saoto soep",
     "Prijs":1,
     "Beschrijving": "",
     "Allergenen": ""
