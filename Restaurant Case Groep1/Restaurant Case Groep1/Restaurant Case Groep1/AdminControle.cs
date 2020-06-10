@@ -37,17 +37,47 @@ namespace Restaurant_Case_Groep1
             public void tablePage()
             //Hier is om keuzes te maken als medewerker een bestelling op te nemen.
             {
-                Console.Clear();
-                Console.WriteLine("Admin pagina");
-                Console.WriteLine("--------------------------------------");
-                Console.WriteLine("Selecteer een tafel (tafel 1- 15");
-                int TableChoise = Console.Read();
-                Console.WriteLine("--------------------------------------");
-                Console.WriteLine("Kies 1 om bestellingen op te nemen");
-                Console.WriteLine("Kies 2 om bestelling te verwijderen");
-                Console.WriteLine("Kies 3 om de tafel vrij te maken of kies 0 om terug te gaan.");
-                int ChoiseOrder = Console.Read();
-
+                bool onPage = true;
+                while (onPage == true)
+                {
+                   Console.Clear();
+                   Console.WriteLine("Admin pagina");
+                   Console.WriteLine("--------------------------------------");
+                   Console.WriteLine("Selecteer een tafel (tafel 1- 15");
+                   Console.WriteLine("Kies "0" om terug te gaan");
+                   string TableChoise = Console.Read();
+                   if (TableChiose == "0")
+                   {
+                      break;
+                   }
+                   else
+                   {
+                      while (true)
+                      {
+                         
+                         Console.WriteLine("--------------------------------------");
+                         Console.WriteLine("Kies 1 om bestellingen op te nemen");
+                         Console.WriteLine("Kies 2 om bestelling te verwijderen");
+                         Console.WriteLine("Kies 3 om de tafel vrij te maken of kies 0 om terug te gaan.");
+                         string ChoiseOrder = Console.Read();
+                         if (ChoiseOrder == "0")
+                         {
+                            break;
+                         }
+                         if (ChoiseOrder == "1")
+                         {
+                            Console.Clear();
+                            Console.Writeline("Selecteer een nummer om een bestelling te nemen");
+                            Console.Writeline("Kies "0" om terug te gaan");
+                            string OrderMenu = Console.ReadLine();
+                            if (OrderMenu == "0")
+                            {
+                               Console.Clear();
+                            }
+                         }
+                      }
+                   }
+                }
             }
 
         }
