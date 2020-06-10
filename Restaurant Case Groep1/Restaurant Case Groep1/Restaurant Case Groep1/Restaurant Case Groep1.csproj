@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminPage.cs" />
     <Compile Include="Reservation.cs" />
     <Compile Include="ReservationManager.cs" />
     <Compile Include="Menus.cs">

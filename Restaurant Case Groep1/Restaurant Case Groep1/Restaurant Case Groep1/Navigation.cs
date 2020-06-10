@@ -29,7 +29,7 @@ namespace Restaurant_Case_Groep1
                 ReservationManager reservationManager = new ReservationManager();
                 Menus menus = new Menus();
                 Login login = new Login();
-                AdminPage page = new AdminPage(menus);
+                AdminControle controle = new AdminControle(menus);
                 Console.Clear();
                 Console.WriteLine("Navigatiescherm");
                 Console.WriteLine("----------");
@@ -49,7 +49,7 @@ namespace Restaurant_Case_Groep1
                 {
                     if (login.loginScreen())
                     {
-                        page.PrintToday();
+                        controle.tablePage();
                         Console.Read();
                     }
                     else 
