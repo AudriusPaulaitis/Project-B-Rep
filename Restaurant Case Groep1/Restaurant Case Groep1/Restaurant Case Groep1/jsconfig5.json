@@ -7,86 +7,74 @@
   },
   {
     "Naam": "Caeser salade",
-    "Prijs":1,
+    "Prijs":7,
     "Beschrijving": "Een verfrissende salade met een vleugje citroen",
     "Allergenen": "Bevat geen allergenen, Niet veganistisch"
   },
   {
     "Naam": "Mexicaanse tosti",
-    "Prijs":1,
+    "Prijs":5,
     "Beschrijving": "Een tosti gevuld met mexicaans gekruid vlees",
     "Allergenen": "Dit gerecht bevat tarwe, Niet veganistisch"
   },
   {
     "Naam": "Stokbrood gevuld met mozarella",
-    "Prijs":1,
+    "Prijs":5,
     "Beschrijving": "Een lekkere stokbrood gevuld met mozarella",
     "Allergenen": "Dit gerecht bevat tarwe, Wel veganistisch"
   },
   {
     "Naam": "Waldorf salade",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Prijs":6,
+    "Beschrijving": "Een verfrissende salade met knolselderij en appel",
+    "Allergenen": "Dit gerecht bevat geen allergenen, Wel veganistisch"
   },
   {
     "Naam": "Broodje rundercarpaccio",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Prijs":8,
+    "Beschrijving": "Dit heerlijke broodje is gevuld met de allerbeste carpaccio",
+    "Allergenen": "Dit gerecht bevat tarwe, Niet veganistisch"
   },
   {
     "Naam": "Wrap gevuld met kip",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Prijs":8,
+    "Beschrijving": "Een goed gevuled wrap met kip, tomaat en ijsbergsla",
+    "Allergenen": "Dit gerecht kan melk bevatten, Niet veganistisch"
   },
   {
     "Naam": "Salade met gerookte zalm",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Prijs":7,
+    "Beschrijving": "Een lekker zalm salade met een heerlijke dressing",
+    "Allergenen": "Dit gerecht kan melk bevatten, Niet veganistisch"
   },
   {
     "Naam": "Broodje met eigen gemaakte kroket",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Prijs":9,
+    "Beschrijving": "Onze chef heeft deze extravagante kroket zelf gemaakt",
+    "Allergenen": "Dit gerecht bevat melk en tarwe, Niet veganistisch"
   },
   {
     "Naam": "Broodje gezond",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
-  },
-  {
-    "Naam": "Zeeplateau",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
-  },
-  {
-    "Naam": "Zukade bitterbal",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Prijs":6,
+    "Beschrijving": "Een broodje wat gevuld is met gezonde dingen",
+    "Allergenen": "Dit gerecht bevat tarwe, Wel veganistisch"
   },
   {
     "Naam": "Dim sum",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Prijs":7,
+    "Beschrijving": "Dit gerecht is perfect voor een kleine hap smiddags",
+    "Allergenen": "Dit gerecht bevat tarwe en melk, Niet veganistisch"
   },
   {
     "Naam": "Gamba piri piri",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Prijs":5,
+    "Beschrijving": "Deze gamba's zijn lekker groot met een pittige smaak",
+    "Allergenen": "Dit gerecht kan melk bevatten, Niet veganistisch"
   },
   {
     "Naam": "Saoto soep",
-    "Prijs":1,
-    "Beschrijving": "",
-    "Allergenen": ""
+    "Prijs":7,
+    "Beschrijving": "Deze soep is rijk gevuld met kipstukjes gekookte ei en uitjes",
+    "Allergenen": "Dit gerecht bevat geen allergenen, Niet veganistisch"
   },
 ]
