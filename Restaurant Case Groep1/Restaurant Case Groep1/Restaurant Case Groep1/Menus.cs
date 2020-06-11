@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Restaurant_Case_Groep1
@@ -91,6 +92,26 @@ namespace Restaurant_Case_Groep1
             {
                 Console.WriteLine(dish);
             }
+        }
+        public Dish GetDishByID(int id)
+        {
+            List<Dish> allDishes = new List<Dish>();
+            allDishes.AddRange(dishes);
+            allDishes.AddRange(dishes2);
+            allDishes.AddRange(dishes3);
+            allDishes.AddRange(dishes4);
+            allDishes.AddRange(dishes5);
+            allDishes.AddRange(dishes6);
+
+
+            foreach ( Dish dish in allDishes)
+            {
+                
+                if ( dish.GerechtID  == id)
+                    return dish;
+            }
+            return null;
+
         }
         public void menuStart()
         {

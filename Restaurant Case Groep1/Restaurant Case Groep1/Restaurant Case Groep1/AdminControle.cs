@@ -11,29 +11,21 @@ namespace Restaurant_Case_Groep1
     }
 
 
-    public partial class AdminControle
+    public  class AdminControle
     {
         public Menus menu;
-        //public List<Table> tables;
+        public List<Table> tables = new List<Table>();
         
         
         public AdminControle(Menus menu)
         {
             this.menu = menu;
-            for(int i = 0; i < 15 ; i++)
+            for(int i = 1; i < 16 ; i++)
             {
-                //tables.Add(new Table());
+                tables.Add(new Table(i));
             }
-            
-
+    
         }
-        
-        //lijst met tabels
-
-
-
-
-
          public void tablePage()
         //Hier is om keuzes te maken als medewerker een bestelling op te nemen.
         {
@@ -57,12 +49,26 @@ namespace Restaurant_Case_Groep1
 
                 else if (TableChoise > 0 && TableChoise < 16)
                 {
-                    
+                    Table selectedtable = null ;
+                    foreach (Table table in tables )
+                    {
+                        if ( table.id == TableChoise)
+                        {
+                            selectedtable = table;
+                            break;
+                        }
+        
+                    }
+                    if (selectedtable == null)
+                    {
+                       Console.WriteLine("geen tafel met dat nummer");
+                        continue;
+                    }
 
                     Console.WriteLine("--------------------------------------");
                     Console.WriteLine("Kies 0 om andere tafel te kiezen.");
                     Console.WriteLine("Kies 1 om bestellingen op te nemen");
-                    Console.WriteLine("Kies 2 om de bestelde gerechten te bekijken");
+                    Console.WriteLine("Kies 2 om een bestelde gerechten te bekijken");
                     Console.WriteLine("Kies 3 om de tafel vrij te maken ");
 
                     int ChoiseOrder = Convert.ToInt32(Console.ReadLine());
@@ -73,19 +79,37 @@ namespace Restaurant_Case_Groep1
 
                     else if (ChoiseOrder == 1)
                     {
-                        Console.Clear();
-                        // menu laten draaien (id, naam en prijs) van alle gerechten
-                        menu.DishPrijzen();
-                        Console.WriteLine("Toets de bestelling ID om een bestelling toe te voegen");
-                        Console.WriteLine("Toets 0 in om terug te gaan");
-                        int OrderMenu = Convert.ToInt32(Console.ReadLine());
-                        if (OrderMenu == 0)
+                        while (true)
                         {
-                        }
-                        else if (OrderMenu > 0 && OrderMenu < 68)
-                        {
-                            //gekozen id de gerecht en prijs invullen 
+                            Console.Clear();
+                            // menu laten draaien (id, naam en prijs) van alle gerechten
+                            menu.DishPrijzen();
+                            Console.WriteLine("Toets de bestelling ID om een bestelling toe te voegen");
+                            Console.WriteLine("Toets 0 in om terug te gaan");
+                            int OrderMenu = Convert.ToInt32(Console.ReadLine());
+                            if (OrderMenu == 0)
+                            {
+                                Console.WriteLine("");
+                                break;
+                            }
+                            else if (OrderMenu > 0 && OrderMenu < 68)
+                            {
+                                //met de gekozen id de gerecht naam en prijs invullen 
 
+                                Console.Clear();
+                                Dish dish = menu.GetDishByID(OrderMenu);
+
+                                selectedtable.dishes.Add(dish);
+
+
+                                Console.WriteLine($"Gerecht {dish.Naam} toegevoegd.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Onbekend gerecht");
+                            }
+                            Console.WriteLine("Druk op enter om nog een gerecht toe te voegen");
+                            Console.ReadLine();
                         }
                     }
 
