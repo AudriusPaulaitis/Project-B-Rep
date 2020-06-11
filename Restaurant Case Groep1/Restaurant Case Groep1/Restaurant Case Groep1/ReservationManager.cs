@@ -38,11 +38,13 @@ namespace Restaurant_Case_Groep1
                 string SelectedOption = Selector(Options);
                 if (SelectedOption == "Reservering maken")
                 {
+                    Console.WriteLine();
                     makeReservation();
                     Console.Read();
                 }
                 else if(SelectedOption == "Reservering vinden/aanpassen")
                 {
+                    Console.WriteLine();
                     findReservation();
                     Console.Read();
                 }
@@ -103,6 +105,7 @@ namespace Restaurant_Case_Groep1
             }
             return "";
         }
+
         //Functie dat reservering aanmaakt / Het vraagt voor details etc. en maakt uiteindelijk een reservering object aan van de RESERVATION class
         public void makeReservation()
         {   //Naam invoer
@@ -313,8 +316,9 @@ namespace Restaurant_Case_Groep1
                 sw.Flush();
                 sw.Close();
                 Console.Clear();
-                Console.WriteLine("Reservering is aangemaakt.");
-                Console.WriteLine();
+                Console.WriteLine("Reservering is sucessvol aangemaakt.");
+                Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+                reservationMenu();
             }
             else
             {
@@ -354,14 +358,17 @@ namespace Restaurant_Case_Groep1
                     Console.WriteLine();
                     anyReservation = true;
                 }
-                if (anyReservation == false)
-                {
-                    Console.WriteLine("Geen reserveringen vandaag!");
-                }
+            }
+
+            if (anyReservation == false)
+            {
+                Console.WriteLine("Geen reserveringen vandaag!");
             }
 
 
             Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+            reservationMenu();
         }
 
         //Functie dat een reservering verwijdert
@@ -370,12 +377,14 @@ namespace Restaurant_Case_Groep1
             Reservations.RemoveAt(listnumber);
             currentreservation = null;
             Console.Clear();
-            Console.WriteLine("De reservering is sucessvol verwijderd.\n");
+            Console.WriteLine("De reservering is sucessvol verwijderd.");
             string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
             StreamWriter sw = new StreamWriter("reservations.json");
             sw.WriteLine(jsonstringreservations);
             sw.Flush();
             sw.Close();
+            Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+            reservationMenu();
         }
 
         //Functie dat een reservering bewerkt
@@ -526,7 +535,9 @@ namespace Restaurant_Case_Groep1
             }
             else
             {
-                Console.WriteLine();
+                Console.Clear();
+                Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+                reservationMenu();
             }
             string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
             StreamWriter sw = new StreamWriter("reservations.json");
@@ -544,7 +555,7 @@ namespace Restaurant_Case_Groep1
             Console.WriteLine("Voor naam voer in 0\n\nVoor telefoonnummer voer in 1\n\nVoor datum en tijd voer in 2\n\nOm terug te gaan naar de reserveringsscherm voer in 3\n");
             string findmethod = Console.ReadLine();
 
-            while (findmethod != "0" && findmethod != "1" && findmethod != "2")
+            while (findmethod != "0" && findmethod != "1" && findmethod != "2" && findmethod != "3")
             {
                 Console.WriteLine();
                 Console.WriteLine("Voer alstublieft alleen 0, 1, 2 of 3 in. Andere tekens zijn niet toegestaan.\n");
@@ -623,6 +634,7 @@ namespace Restaurant_Case_Groep1
                     }
                     else
                     {
+                        Console.Clear();
                         Console.WriteLine("Kies dan alstublieft een ander optie van zoeken.");
                         Console.WriteLine();
                         findReservation();
@@ -701,22 +713,17 @@ namespace Restaurant_Case_Groep1
                                     Console.WriteLine();
                                     deleteReservation(foundreservation, i);
                                 }
-                                else if (decision == "2")
+                                else
                                 {
                                     Console.WriteLine();
                                     editReservation(foundreservation);
-                                }
-                                else 
-                                {
-                                    Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
-                                    Thread.Sleep(5000);
-                                    reservationMenu();
                                 }
                             }
                         }
                     }
                     else
                     {
+                        Console.Clear();
                         Console.WriteLine("Kies dan alstublieft een ander optie van zoeken.");
                         Console.WriteLine();
                         findReservation();
@@ -732,7 +739,7 @@ namespace Restaurant_Case_Groep1
                     findReservation();
                 }
             }
-            else //Datum tijd manier
+            else if (findmethod == "2") //Datum tijd manier
             {
 
                 Console.Clear();
@@ -823,6 +830,7 @@ namespace Restaurant_Case_Groep1
 
                     else
                     {
+                        Console.Clear();
                         Console.WriteLine("Kies dan alstublieft een ander optie van zoeken.");
                         Console.WriteLine();
                         findReservation();
@@ -838,6 +846,12 @@ namespace Restaurant_Case_Groep1
                     findReservation();
                 }
 
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+                reservationMenu();
             }
 
         }

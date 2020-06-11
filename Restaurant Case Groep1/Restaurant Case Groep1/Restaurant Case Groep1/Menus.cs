@@ -15,6 +15,13 @@ namespace Restaurant_Case_Groep1
         public List<Dish> dishes5;
         public List<Dish> dishes6;
 
+        public List<Dishbestel> dishesB1;
+        public List<Dishbestel> dishesB2;
+        public List<Dishbestel> dishesB3;
+        public List<Dishbestel> dishesB4;
+        public List<Dishbestel> dishesB5;
+        public List<Dishbestel> dishesB6;
+
         static int index = 0;
 
         public Menus()
@@ -43,6 +50,47 @@ namespace Restaurant_Case_Groep1
             string jsconfigPath6 = "jsconfig6.json";
             string jsonDishes6 = File.ReadAllText(jsconfigPath6);
             dishes6 = JsonConvert.DeserializeObject<List<Dish>>(jsonDishes6);
+
+            // hier maak ik iets aan zodat ik bij admincontrole alleen de prijs naam en id print.
+
+            dishesB1 = JsonConvert.DeserializeObject<List<Dishbestel>>(jsonDishes);
+            dishesB2 = JsonConvert.DeserializeObject<List<Dishbestel>>(jsonDishes2);
+            dishesB3 = JsonConvert.DeserializeObject<List<Dishbestel>>(jsonDishes3);
+            dishesB4 = JsonConvert.DeserializeObject<List<Dishbestel>>(jsonDishes4);
+            dishesB5 = JsonConvert.DeserializeObject<List<Dishbestel>>(jsonDishes5);
+            dishesB6 = JsonConvert.DeserializeObject<List<Dishbestel>>(jsonDishes6);
+        }
+        public void DishPrijzen()
+        {
+            foreach (var dish in dishesB1)
+            {
+                Console.WriteLine(dish);
+            }
+            Console.WriteLine("----------");
+            foreach (var dish in dishesB2)
+            {
+                Console.WriteLine(dish);
+            }
+            Console.WriteLine("----------");
+            foreach (var dish in dishesB3)
+            {
+                Console.WriteLine(dish);
+            }
+            Console.WriteLine("----------");
+            foreach (var dish in dishesB4)
+            {
+                Console.WriteLine(dish);
+            }
+            Console.WriteLine("----------");
+            foreach (var dish in dishesB5)
+            {
+                Console.WriteLine(dish);
+            }
+            Console.WriteLine("----------");
+            foreach (var dish in dishesB6)
+            {
+                Console.WriteLine(dish);
+            }
         }
         public void menuStart()
         {
