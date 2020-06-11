@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Text;
+using System.Threading;
 
 namespace Restaurant_Case_Groep1
 {
@@ -31,6 +32,7 @@ namespace Restaurant_Case_Groep1
             Navigation nav = new Navigation();
             Console.Clear();
             bool onPage = true;
+            returnback:
             while (onPage == true)
             {
                 Console.WriteLine("Admin pagina");
@@ -63,7 +65,7 @@ namespace Restaurant_Case_Groep1
                        Console.WriteLine("geen tafel met dat nummer");
                         continue;
                     }
-
+                    start:
                     Console.WriteLine("--------------------------------------");
                     Console.WriteLine("Kies 0 om andere tafel te kiezen.");
                     Console.WriteLine("Kies 1 om bestellingen op te nemen");
@@ -110,20 +112,25 @@ namespace Restaurant_Case_Groep1
                             }
                             Console.WriteLine("Druk op enter om nog een gerecht toe te voegen");
                             Console.ReadLine();
+                            goto start;
                         }
                     }
 
                     else if (ChoiseOrder == 2)
                     {
-                        Console.WriteLine(selectedtable.dishes);
                         Console.Clear();
+                        foreach (var i in selectedtable.dishes){
+                            Console.WriteLine(i);
+                        }
                         Console.WriteLine();
+                        Thread.Sleep(1500);
+                        goto returnback;
                     }
     
 
-                    else if (ChoiseOrder == 4)
+                    else if (ChoiseOrder == 3)
                     {
-                        //tafel leegmaken
+                        selectedtable.dishes.Clear();
                         Console.WriteLine("Deze tafel is nu vrijgemaakt.");
                     }
 
