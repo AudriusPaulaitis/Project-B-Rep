@@ -100,10 +100,12 @@ namespace Restaurant_Case_Groep1
                 if (SelectedMenu == "Ochtend")
                 {
                     Console.Clear();
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     foreach (var dish in dishes)
                     {
                         Console.WriteLine(dish);
                     }
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     Console.Read();
                 }
                 else if (SelectedMenu == "Terug")
@@ -114,46 +116,56 @@ namespace Restaurant_Case_Groep1
                 else if (SelectedMenu == "Middag")
                 {
                     Console.Clear();
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     foreach (var dish in dishes5)
                     {
                         Console.WriteLine(dish);
                     }
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     Console.Read();
                 }
                 else if (SelectedMenu == "Avond")
                 {
                     Console.Clear();
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     foreach (var dish in dishes6)
                     {
                         Console.WriteLine(dish);
                     }
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     Console.Read();
                 }
                 else if (SelectedMenu == "Koude dranken")
                 {
                     Console.Clear();
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     foreach (var dish in dishes2)
                     {
                         Console.WriteLine(dish);
                     }
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     Console.Read();
                 }
                 else if (SelectedMenu == "Warme dranken")
                 {
                     Console.Clear();
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     foreach (var dish in dishes3)
                     {
                         Console.WriteLine(dish);
                     }
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     Console.Read();
                 }
                 else if (SelectedMenu == "Alcoholische dranken")
                 {
                     Console.Clear();
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     foreach (var dish in dishes4)
                     {
                         Console.WriteLine(dish);
                     }
+                    Console.WriteLine("Druk op Enter om terug te gaan");
                     Console.Read();
                 }
             }   

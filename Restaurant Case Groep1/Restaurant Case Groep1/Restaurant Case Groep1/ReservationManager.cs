@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Text;
 
 namespace Restaurant_Case_Groep1
@@ -14,26 +15,93 @@ namespace Restaurant_Case_Groep1
         public List<Reservation> Reservations = JsonConvert.DeserializeObject<List<Reservation>>(File.ReadAllText("reservations.json"));
 
         //Reservering navigatie
-        public void reservationMenu()
-        {
-            Console.WriteLine("Welkom bij het reserveringsscherm. Kies uit de volgende opties:");
-            Console.WriteLine("1. Reservering maken ");
-            Console.WriteLine("2. Reservering vinden ");
-            Console.WriteLine("3. Print reserveringen van vandaag");
-            Console.Write("Optie: ");
-            switch (Console.ReadLine())
+        int index = 0;
+		public void reservationMenu()
+		{
+            Navigation nav = new Navigation();
+            Console.Clear();
+            Console.WriteLine("Reserveringsscherm");
+            Console.WriteLine("---------------");
+            Console.CursorVisible = false;
+            List<string> Options = new List<string>()
             {
-                case "1":
-                    makeReservation();
-                    break;
-                case "2":
-                    findReservation();
-                    break;
-                case "3":
-                    PrintToday();
-                    break;
+                "Reservering maken",
+                "Reservering vinden/aanpassen",
+                "Terug"
+            };
 
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("Reserveringsscherm");
+                Console.WriteLine("----------");
+                string SelectedOption = Selector(Options);
+                if (SelectedOption == "Reservering maken")
+                {
+                    makeReservation();
+                    Console.Read();
+                }
+                else if(SelectedOption == "Reservering vinden/aanpassen")
+                {
+                    findReservation();
+                    Console.Read();
+                }
+                else if (SelectedOption == "Terug")
+                {
+                    nav.navigation();
+                    Console.Read();
+                }
+            }   
+        }
+        public string Selector(List<string> Options)
+        {
+            for (int i = 0; i < Options.Count; i++)
+            {
+                if (i == index)
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine(Options[i]);
+                }
+                else
+                {
+                    Console.WriteLine(Options[i]);
+                }
+                Console.ResetColor();
             }
+            ConsoleKeyInfo PressedKey = Console.ReadKey();
+            Console.Clear();
+            if (PressedKey.Key == ConsoleKey.UpArrow)
+            {
+                if (index == 0)
+                {
+                    
+                }
+                else
+                {
+                    index--;
+                }
+            }
+            else if (PressedKey.Key == ConsoleKey.DownArrow)
+            {
+                if (index == Options.Count - 1)
+                {
+
+                }
+                else
+                {
+                    index++;
+                }
+            }
+            else if (PressedKey.Key == ConsoleKey.Enter)
+            {
+                return Options[index];
+            }
+            else
+            {
+                return "";
+            }
+            return "";
         }
         //Functie dat reservering aanmaakt / Het vraagt voor details etc. en maakt uiteindelijk een reservering object aan van de RESERVATION class
         public void makeReservation()
@@ -473,13 +541,13 @@ namespace Restaurant_Case_Groep1
             //3 manieren om reservering te vinden.
             Console.WriteLine("Op welke manier wilt u de reservering vinden?\n");
             Console.WriteLine("Wilt u de reservering vinden op naam, telefoonnummer of datum en tijd?\n");
-            Console.WriteLine("Voor naam voer in 0, voor telefoonnummer voer in 1 en voor datum en tijd voer in 2.\n");
+            Console.WriteLine("Voor naam voer in 0\n\nVoor telefoonnummer voer in 1\n\nVoor datum en tijd voer in 2\n\nOm terug te gaan naar de reserveringsscherm voer in 3\n");
             string findmethod = Console.ReadLine();
 
             while (findmethod != "0" && findmethod != "1" && findmethod != "2")
             {
                 Console.WriteLine();
-                Console.WriteLine("Voer alstublieft alleen 0, 1 of 2 in. Andere tekens zijn niet toegestaan.\n");
+                Console.WriteLine("Voer alstublieft alleen 0, 1, 2 of 3 in. Andere tekens zijn niet toegestaan.\n");
                 findmethod = Console.ReadLine();
             }
 
@@ -633,10 +701,16 @@ namespace Restaurant_Case_Groep1
                                     Console.WriteLine();
                                     deleteReservation(foundreservation, i);
                                 }
-                                else
+                                else if (decision == "2")
                                 {
                                     Console.WriteLine();
                                     editReservation(foundreservation);
+                                }
+                                else 
+                                {
+                                    Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+                                    Thread.Sleep(5000);
+                                    reservationMenu();
                                 }
                             }
                         }
