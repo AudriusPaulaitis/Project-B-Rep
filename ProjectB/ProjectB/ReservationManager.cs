@@ -25,9 +25,11 @@ namespace ProjectB
             switch (Console.ReadLine())
             {
                 case "1":
+                    Console.WriteLine();
                     makeReservation();
                     break;
                 case "2":
+                    Console.WriteLine();
                     findReservation();
                     break;
                 case "3":
@@ -246,8 +248,9 @@ namespace ProjectB
                 sw.Flush();
                 sw.Close();
                 Console.Clear();
-                Console.WriteLine("Reservering is aangemaakt.");
-                Console.WriteLine();
+                Console.WriteLine("Reservering is sucessvol aangemaakt."); 
+                Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+                reservationMenu();
             }
             else
             {
@@ -287,14 +290,17 @@ namespace ProjectB
                     Console.WriteLine();
                     anyReservation = true;
                 }
-                if (anyReservation == false)
-                {
-                    Console.WriteLine("Geen reserveringen vandaag!");
-                }
             }
 
-            
+            if (anyReservation == false)
+            {
+                Console.WriteLine("Geen reserveringen vandaag!");
+            }
+
+
             Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+            reservationMenu();
         }
 
         //Functie dat een reservering verwijdert
@@ -303,12 +309,14 @@ namespace ProjectB
             Reservations.RemoveAt(listnumber);
             currentreservation = null;
             Console.Clear();
-            Console.WriteLine("De reservering is sucessvol verwijderd.\n");
+            Console.WriteLine("De reservering is sucessvol verwijderd.");
             string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
             StreamWriter sw = new StreamWriter("reservations.json");
             sw.WriteLine(jsonstringreservations);
             sw.Flush();
             sw.Close();
+            Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+            reservationMenu();
         }
 
         //Functie dat een reservering bewerkt
@@ -459,7 +467,9 @@ namespace ProjectB
             }
             else
             {
-                Console.WriteLine();
+                Console.Clear();
+                Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+                reservationMenu();
             }
             string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
             StreamWriter sw = new StreamWriter("reservations.json");
@@ -556,6 +566,7 @@ namespace ProjectB
                     }
                     else
                     {
+                        Console.Clear();
                         Console.WriteLine("Kies dan alstublieft een ander optie van zoeken.");
                         Console.WriteLine();
                         findReservation();
@@ -644,6 +655,7 @@ namespace ProjectB
                     }
                     else
                     {
+                        Console.Clear();
                         Console.WriteLine("Kies dan alstublieft een ander optie van zoeken.");
                         Console.WriteLine();
                         findReservation();
@@ -750,6 +762,7 @@ namespace ProjectB
 
                     else
                     {
+                        Console.Clear();
                         Console.WriteLine("Kies dan alstublieft een ander optie van zoeken.");
                         Console.WriteLine();
                         findReservation();
@@ -768,6 +781,7 @@ namespace ProjectB
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
                 reservationMenu();
             }
