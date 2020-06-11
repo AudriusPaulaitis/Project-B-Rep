@@ -6,12 +6,8 @@ using System.Threading;
 
 namespace Restaurant_Case_Groep1
 {
-    class Dayincome
-    {
 
-    }
-
-    public  class AdminControle
+    public class AdminControle
     {
         public Menus menu;
         public List<Table> tables = new List<Table>();
@@ -26,7 +22,7 @@ namespace Restaurant_Case_Groep1
             }
     
         }
-         public void tablePage()
+        public void tablePage()
         //Hier is om keuzes te maken als medewerker een bestelling op te nemen.
         {
             Navigation nav = new Navigation();
@@ -40,7 +36,17 @@ namespace Restaurant_Case_Groep1
                 Console.WriteLine("--------------------------------------");
                 Console.WriteLine("Selecteer een tafel (tafel 1- 15)");
                 Console.WriteLine("Kies 0 om terug te gaan");
-                int TableChoise = Convert.ToInt32(Console.ReadLine());
+                var Input = Console.ReadLine();
+                int TableChoise;
+                while (!int.TryParse(Input, out TableChoise))
+                {
+                    Console.WriteLine("Input klopt niet");
+                    Input = Console.ReadLine();
+                }
+
+                
+                    
+                    
 
                 //je gaat weg van de adminpage
                 if (TableChoise == 0)
@@ -151,6 +157,3 @@ namespace Restaurant_Case_Groep1
         }
     }
 }
-
-  
- 

@@ -19,8 +19,8 @@ namespace Restaurant_Case_Groep1 {
             }
             return costTotal;
         }
-        public  Table(int x){
-            this.id = x;
+        public Table(int x){
+           this.id = x;
         }
     }
 }

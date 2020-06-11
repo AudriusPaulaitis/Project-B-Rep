@@ -13,8 +13,11 @@ namespace Restaurant_Case_Groep1
 		{
             start:
             Console.Clear();
-            Console.WriteLine("Navigatiescherm");
-            Console.WriteLine("---------------");
+            Console.WriteLine("         Navigatiescherm          ");
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Beweeg met behulp van de pijl keys");
+            Console.WriteLine("Bij te veel tekst kan je scrollen");
+            Console.WriteLine("----------------------------------");
             Console.CursorVisible = false;
             List<string> Options = new List<string>()
             {
@@ -31,8 +34,11 @@ namespace Restaurant_Case_Groep1
                 Login login = new Login();
                 AdminControle controle = new AdminControle(menus);
                 Console.Clear();
-                Console.WriteLine("Navigatiescherm");
-                Console.WriteLine("----------");
+                Console.WriteLine("         Navigatiescherm          ");
+                Console.WriteLine("----------------------------------");
+                Console.WriteLine("Beweeg met behulp van de pijl keys");
+                Console.WriteLine("Bij te veel tekst kan je scrollen");
+                Console.WriteLine("----------------------------------");
                 string SelectedOption = Selector(Options);
 
                 if (SelectedOption == "Reserveringsscherm")
