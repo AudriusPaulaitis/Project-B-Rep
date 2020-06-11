@@ -40,7 +40,7 @@ namespace Restaurant_Case_Groep1
                 int TableChoise;
                 while (!int.TryParse(Input, out TableChoise))
                 {
-                    Console.WriteLine("Input klopt niet");
+                    Console.WriteLine("Input klopt niet (Geen nummer). Probeer het nog een keer");
                     Input = Console.ReadLine();
                 }
 
@@ -68,7 +68,7 @@ namespace Restaurant_Case_Groep1
                     }
                     if (selectedtable == null)
                     {
-                       Console.WriteLine("geen tafel met dat nummer");
+                        Console.WriteLine("Input klopt niet (Geen nummer). Probeer het nog een keer");
                         continue;
                     }
                     start:
@@ -77,9 +77,13 @@ namespace Restaurant_Case_Groep1
                     Console.WriteLine("Kies 1 om bestellingen op te nemen");
                     Console.WriteLine("Kies 2 om een bestelde gerechten te bekijken");
                     Console.WriteLine("Kies 3 om de tafel vrij te maken ");
-                
-
-                    int ChoiseOrder = Convert.ToInt32(Console.ReadLine());
+                    Input = Console.ReadLine();
+                    int ChoiseOrder;
+                    while (!int.TryParse(Input, out ChoiseOrder))
+                    {
+                        Console.WriteLine("Input klopt niet (Geen nummer). Probeer het nog een keer");
+                        Input = Console.ReadLine();
+                    }
                     if (ChoiseOrder == 0)
                     {
                         Console.WriteLine("");
@@ -94,7 +98,13 @@ namespace Restaurant_Case_Groep1
                             menu.DishPrijzen();
                             Console.WriteLine("Toets de bestelling ID om een bestelling toe te voegen");
                             Console.WriteLine("Toets 0 in om terug te gaan");
-                            int OrderMenu = Convert.ToInt32(Console.ReadLine());
+                            Input = Console.ReadLine();
+                            int OrderMenu;
+                            while (!int.TryParse(Input, out OrderMenu))
+                            {
+                                Console.WriteLine("Input klopt niet (Geen nummer). Probeer het nog een keer");
+                                Input = Console.ReadLine();
+                            }
                             if (OrderMenu == 0)
                             {
                                 Console.WriteLine("");
