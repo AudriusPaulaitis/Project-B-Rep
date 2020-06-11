@@ -14,7 +14,7 @@ namespace Restaurant_Case_Groep1
     public partial class AdminControle
     {
         public Menus menu;
-        public List<Table> tables;
+        //public List<Table> tables;
         
         
         public AdminControle(Menus menu)
@@ -22,7 +22,7 @@ namespace Restaurant_Case_Groep1
             this.menu = menu;
             for(int i = 0; i < 15 ; i++)
             {
-                tables.Add(new Table());
+                //tables.Add(new Table());
             }
             
 
