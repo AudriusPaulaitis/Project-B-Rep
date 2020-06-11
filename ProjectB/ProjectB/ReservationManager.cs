@@ -474,13 +474,13 @@ namespace ProjectB
             //3 manieren om reservering te vinden.
             Console.WriteLine("Op welke manier wilt u de reservering vinden?\n");
             Console.WriteLine("Wilt u de reservering vinden op naam, telefoonnummer of datum en tijd?\n");
-            Console.WriteLine("Voor naam voer in 0, voor telefoonnummer voer in 1 en voor datum en tijd voer in 2.\n");
+            Console.WriteLine("Voor naam voer in 0\n\nVoor telefoonnummer voer in 1\n\nVoor datum en tijd voer in 2\n\nOm terug te gaan naar de reserveringsscherm voer in 3\n");
             string findmethod = Console.ReadLine();
 
-            while (findmethod != "0" && findmethod != "1" && findmethod != "2")
+            while (findmethod != "0" && findmethod != "1" && findmethod != "2" && findmethod != "3")
             {
                 Console.WriteLine();
-                Console.WriteLine("Voer alstublieft alleen 0, 1 of 2 in. Andere tekens zijn niet toegestaan.\n");
+                Console.WriteLine("Voer alstublieft alleen 0, 1, 2 of 3 in. Andere tekens zijn niet toegestaan.\n");
                 findmethod = Console.ReadLine();
             }
 
@@ -659,7 +659,7 @@ namespace ProjectB
                     findReservation();
                 }
             }
-            else //Datum tijd manier
+            else if (findmethod == "2") //Datum tijd manier
             {
 
                 Console.Clear();
@@ -765,6 +765,11 @@ namespace ProjectB
                     findReservation();
                 }
 
+            }
+            else
+            {
+                Console.WriteLine("\nWe sturen u nu terug naar de reserveringsscherm.\n");
+                reservationMenu();
             }
 
         }
