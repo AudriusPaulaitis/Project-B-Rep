@@ -15,7 +15,7 @@ namespace Restaurant_Case_Groep1
             Console.Clear();
             Console.WriteLine("         Navigatiescherm          ");
             Console.WriteLine("----------------------------------");
-            Console.WriteLine("Beweeg met behulp van de pijl keys");
+            Console.WriteLine("Beweeg met behulp van de pijl toetsen");
             Console.WriteLine("Bij te veel tekst kan je scrollen");
             Console.WriteLine("----------------------------------");
             Console.CursorVisible = false;
