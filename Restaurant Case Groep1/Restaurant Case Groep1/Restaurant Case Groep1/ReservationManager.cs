@@ -1,111 +1,43 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Restaurant_Case_Groep1
-{
+{   //Steven Ren
     class ReservationManager
     {
         //Reservering lijst
-        public List<Reservation> Reservations = new List<Reservation>();
-        int index = 0;
+        //Lijst bestaat uit reserveringen die je haalt van een JSON file. De JSON objecten worden geconvert naar C# Reservation OBJECTS en dat zit dus in de lijst
+        public List<Reservation> Reservations = JsonConvert.DeserializeObject<List<Reservation>>(File.ReadAllText("reservations.json"));
+
         //Reservering navigatie
         public void reservationMenu()
         {
-            Console.Clear();
-            Console.WriteLine("Reserveringsscherm");
-            Console.WriteLine("------------------");
-
-            Console.CursorVisible = false;
-            List<string> ResOptions = new List<string>()
+            Console.WriteLine("Welkom bij het reserveringsscherm. Kies uit de volgende opties:");
+            Console.WriteLine("1. Reservering maken ");
+            Console.WriteLine("2. Reservering vinden ");
+            Console.WriteLine("3. Print reserveringen van vandaag");
+            Console.Write("Optie: ");
+            switch (Console.ReadLine())
             {
-                "Reservering maken",
-                "Reservering vinden en aanpassen",
-                "Terug"
-            };
-
-            while (true)
-            {
-                Console.Clear();
-                Console.WriteLine("Navigatiescherm");
-                Console.WriteLine("----------");
-                string SelectedOption = Selector(ResOptions);
-                Navigation navigation = new Navigation();
-
-                if (SelectedOption == "Reservering maken")
-                {
+                case "1":
                     makeReservation();
-                    Console.Read();
-                }
-                else if (SelectedOption == "Reservering vinden en aanpassen")
-                {
+                    break;
+                case "2":
                     findReservation();
-                    Console.Read();
-                }
-                else if (SelectedOption == "Terug")
-                {
-                    navigation.navigation();
-                    Console.Read();
-                }
+                    break;
+                case "3":
+                    PrintToday();
+                    break;
 
             }
         }
-        public string Selector(List<string> ResOptions)
-        {
-            for (int i = 0; i < ResOptions.Count; i++)
-            {
-                if (i == index)
-                {
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine(ResOptions[i]);
-                }
-                else
-                {
-                    Console.WriteLine(ResOptions[i]);
-                }
-                Console.ResetColor();
-            }
-            ConsoleKeyInfo PressedKey = Console.ReadKey();
-            Console.Clear();
-            if (PressedKey.Key == ConsoleKey.UpArrow)
-            {
-                if (index == 0)
-                {
-
-                }
-                else
-                {
-                    index--;
-                }
-            }
-            else if (PressedKey.Key == ConsoleKey.DownArrow)
-            {
-                if (index == ResOptions.Count - 1)
-                {
-
-                }
-                else
-                {
-                    index++;
-                }
-            }
-            else if (PressedKey.Key == ConsoleKey.Enter)
-            {
-                return ResOptions[index];
-            }
-            else
-            {
-                return "";
-            }
-            return "";
-        }
-
         //Functie dat reservering aanmaakt / Het vraagt voor details etc. en maakt uiteindelijk een reservering object aan van de RESERVATION class
         public void makeReservation()
-        {   //Naam invoerC:\Users\APaul\Desktop\Restaurant Case\Restaurant Case Groep1\Restaurant Case Groep1\ReservationManager.cs
+        {   //Naam invoer
             Console.WriteLine("Type uw naam in.\n");
             string name = Console.ReadLine();
             Console.WriteLine();
@@ -121,11 +53,13 @@ namespace Restaurant_Case_Groep1
                 {
                     Console.WriteLine("Type een kortere naam in alstublieft.\n");
                     name = Console.ReadLine();
+                    Console.WriteLine();
                 }
             }
+
             Console.Clear();
+
             //E-mail invoer
-            Console.WriteLine();
             Console.WriteLine("Type uw e-mail in.\n");
             string email = Console.ReadLine();
             char[] emailverify = email.ToCharArray();
@@ -159,12 +93,14 @@ namespace Restaurant_Case_Groep1
                     phonenumber = Console.ReadLine();
                 }
             }
+
             Console.Clear();
+
             //Aantal personen reservering
-            Console.WriteLine();
             Console.WriteLine("Voor hoeveel personen is de reservering? U kunt kiezen uit: 2 / 3 / 4 / 5\n");
             string capacitynum = Console.ReadLine();
             while (!int.TryParse(capacitynum, out num) || (capacitynum != "2" && capacitynum != "3" && capacitynum != "4" && capacitynum != "5"))
+            {
                 if (!int.TryParse(capacitynum, out num))
                 {
                     Console.WriteLine();
@@ -172,15 +108,17 @@ namespace Restaurant_Case_Groep1
                     Console.WriteLine("Voer alstublieft een correct nummer in.\n");
                     capacitynum = Console.ReadLine();
                 }
-            Console.WriteLine();
-            Console.WriteLine("U kunt alleen kiezen uit: 2/3/4/5");
-            Console.WriteLine("Voer alstublieft een correct nummer in.\n");
+                Console.WriteLine();
+                Console.WriteLine("U kunt alleen kiezen uit: 2/3/4/5");
+                Console.WriteLine("Voer alstublieft een correct nummer in.\n");
+                capacitynum = Console.ReadLine();
+            }
             int capacity = Int32.Parse(capacitynum);
+
+            Console.Clear();
 
             //Tijd maand / dag / uur
             //Dictionary voor maand kiezen 
-            Console.Clear();
-            Console.WriteLine();
             Dictionary<string, int> monthdic = new Dictionary<string, int>
             {
                 {"januari", 1},
@@ -197,7 +135,6 @@ namespace Restaurant_Case_Groep1
                 {"december", 12 }
             };
 
-            Console.Clear();
             Console.WriteLine("Voor welk maand reserveert u?\nU kunt de naam van de maand invoeren. Bijvoorbeeld: januari.\n");
             string monthnumverify = Console.ReadLine();
             string monthnum = monthnumverify.ToLower();
@@ -218,9 +155,12 @@ namespace Restaurant_Case_Groep1
                     monthnum = monthnumverify.ToLower();
                 }
             }
+
+            //Dag
             Console.Clear();
+
             int days = 0;
-                
+
             //Checkt hoeveel dagen er in de maand zijn
             if (monthnum == "februari")
             {
@@ -234,7 +174,7 @@ namespace Restaurant_Case_Groep1
             {
                 days = 31;
             }
-            Console.Clear();
+
             //Checkt of die dag wel bestaat in de maand en kijkt ook naar invoer fouten.
             Console.WriteLine($"Voor welke dag van {monthnum} wilt u reserveren?\nU kunt de dagen 1 - {days} invoeren.");
             Console.WriteLine();
@@ -299,16 +239,61 @@ namespace Restaurant_Case_Groep1
             if (confirmation == "ja")
             {
                 Reservations.Add(new Reservation(name, email, phonenumber, capacity, new DateTime(2020, month, day, time.Hour, time.Minute, 0)));
-                Console.WriteLine();
+                string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
+                StreamWriter sw = new StreamWriter("reservations.json");
+                sw.WriteLine(jsonstringreservations);
+                sw.Flush();
+                sw.Close();
+                Console.Clear();
                 Console.WriteLine("Reservering is aangemaakt.");
                 Console.WriteLine();
-                reservationMenu();
             }
             else
             {
+                Console.Clear();
                 makeReservation();
             }
 
+        }
+
+        //Functie dat hele lijst reserveringen print
+        public void PrintReservations()
+        {
+            foreach (Reservation reservation in Reservations)
+            {
+                reservation.Print();
+                Console.WriteLine();
+            }
+        }
+
+        //Functie dat reserveringen print van vandaag
+        public void PrintToday()
+        {
+            //Aangeven de detum van vandaag
+            DateTime today = DateTime.Now;
+            Console.Clear();
+            Console.WriteLine("Reserveringen");
+            Console.WriteLine("Datum= " + today);
+            Console.WriteLine("--------------------------------------------------");
+
+            bool anyReservation = false;
+
+            foreach (Reservation reservation in Reservations)
+            {
+                if (reservation.date.Day == today.Day)
+                {
+                    reservation.Print();
+                    Console.WriteLine();
+                    anyReservation = true;
+                }
+                if (anyReservation == false)
+                {
+                    Console.WriteLine("Geen reserveringen vandaag!");
+                }
+            }
+
+
+            Console.WriteLine("--------------------------------------------------");
         }
 
         //Functie dat een reservering verwijdert
@@ -316,12 +301,19 @@ namespace Restaurant_Case_Groep1
         {
             Reservations.RemoveAt(listnumber);
             currentreservation = null;
+            Console.Clear();
             Console.WriteLine("De reservering is sucessvol verwijderd.\n");
+            string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
+            StreamWriter sw = new StreamWriter("reservations.json");
+            sw.WriteLine(jsonstringreservations);
+            sw.Flush();
+            sw.Close();
         }
 
         //Functie dat een reservering bewerkt
         public void editReservation(Reservation currentreservation)
         {
+            Console.Clear();
             Console.WriteLine("Huidige gegevens.\n");
             currentreservation.Print();
             Console.WriteLine("\nAls u iets wil veranderen kies dan een van deze opties.\n1: Naam\n2: E-mail\n3: Telefoonnummer\n4: Aantal personen\n5: Tijd van reservering\nAls u niks wilt veranderen kies dan 0.\n");
@@ -468,21 +460,25 @@ namespace Restaurant_Case_Groep1
             {
                 Console.WriteLine();
             }
-
+            string jsonstringreservations = JsonConvert.SerializeObject(Reservations, Formatting.Indented);
+            StreamWriter sw = new StreamWriter("reservations.json");
+            sw.WriteLine(jsonstringreservations);
+            sw.Flush();
+            sw.Close();
         }
 
         //Functie dat reserveringen vind op naam/telefoonnummer/datum --- dit leidt ook tot het kiezen van wat je met de reservering wilt doen na het vinden
         public void findReservation()
         {
             //3 manieren om reservering te vinden.
-
             Console.WriteLine("Op welke manier wilt u de reservering vinden?\n");
             Console.WriteLine("Wilt u de reservering vinden op naam, telefoonnummer of datum en tijd?\n");
-            Console.WriteLine("Voor naam voer in 0, voor telefoonnummer voer in 1 en voor datum voer in 2.\n");
+            Console.WriteLine("Voor naam voer in 0, voor telefoonnummer voer in 1 en voor datum en tijd voer in 2.\n");
             string findmethod = Console.ReadLine();
 
             while (findmethod != "0" && findmethod != "1" && findmethod != "2")
             {
+                Console.WriteLine();
                 Console.WriteLine("Voer alstublieft alleen 0, 1 of 2 in. Andere tekens zijn niet toegestaan.\n");
                 findmethod = Console.ReadLine();
             }
@@ -490,7 +486,6 @@ namespace Restaurant_Case_Groep1
             if (findmethod == "0")
             {
                 //Methode op naam
-
                 Console.Clear();
                 Console.WriteLine("Onder welke naam staat de reservering?\nLet op het is hoofdletter gevoelig dus voer alstublieft de naam precies in.");
                 Console.WriteLine();
@@ -503,6 +498,7 @@ namespace Restaurant_Case_Groep1
                 {
                     if (name == Reservations[i].name)
                     {
+                        Console.Clear();
                         Console.WriteLine("Dit is wat er is gevonden.");
                         Console.WriteLine();
                         Reservations[i].Print();
@@ -567,6 +563,7 @@ namespace Restaurant_Case_Groep1
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("We hebben geen reservering gevonden op die naam.");
                     Console.WriteLine("Probeer alstublieft opnieuw of kies een ander optie van vinden.");
                     Console.WriteLine();
@@ -589,6 +586,7 @@ namespace Restaurant_Case_Groep1
                 {
                     if (phonenumber == Reservations[i].phonenumber)
                     {
+                        Console.Clear();
                         Console.WriteLine("Dit is wat er is gevonden.");
                         Console.WriteLine();
                         Reservations[i].Print();
@@ -653,6 +651,7 @@ namespace Restaurant_Case_Groep1
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("We hebben geen reservering gevonden op die telefoonnummer.");
                     Console.WriteLine("Probeer alstublieft opnieuw of kies een ander optie van vinden.");
                     Console.WriteLine();
@@ -661,6 +660,7 @@ namespace Restaurant_Case_Groep1
             }
             else //Datum tijd manier
             {
+
                 Console.Clear();
                 DateTime date;
                 Console.WriteLine("Type in de datum en tijd van de reservering in formaat: YY-MM-DD HH:MM");
@@ -691,6 +691,7 @@ namespace Restaurant_Case_Groep1
                 {
                     if (date == Reservations[i].date)
                     {
+                        Console.Clear();
                         Console.WriteLine("Dit is wat er is gevonden.");
                         Console.WriteLine();
                         Reservations[i].Print();
@@ -756,6 +757,7 @@ namespace Restaurant_Case_Groep1
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("We hebben geen reservering gevonden op die datum en tijd.");
                     Console.WriteLine("Probeer alstublieft opnieuw of kies een ander optie van vinden.");
                     Console.WriteLine();
@@ -768,4 +770,3 @@ namespace Restaurant_Case_Groep1
 
     }
 }
-
