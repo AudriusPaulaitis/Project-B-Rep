@@ -10,7 +10,6 @@ namespace Restaurant_Case_Groep1
 
     }
 
-
     public  class AdminControle
     {
         public Menus menu;
@@ -70,6 +69,7 @@ namespace Restaurant_Case_Groep1
                     Console.WriteLine("Kies 1 om bestellingen op te nemen");
                     Console.WriteLine("Kies 2 om een bestelde gerechten te bekijken");
                     Console.WriteLine("Kies 3 om de tafel vrij te maken ");
+                
 
                     int ChoiseOrder = Convert.ToInt32(Console.ReadLine());
                     if (ChoiseOrder == 0)
@@ -115,13 +115,13 @@ namespace Restaurant_Case_Groep1
 
                     else if (ChoiseOrder == 2)
                     {
-                        //orders van de tafel laten zien
+                        Console.WriteLine(selectedtable.dishes);
                         Console.Clear();
                         Console.WriteLine();
                     }
-                    
+    
 
-                    else if (ChoiseOrder == 3)
+                    else if (ChoiseOrder == 4)
                     {
                         //tafel leegmaken
                         Console.WriteLine("Deze tafel is nu vrijgemaakt.");
