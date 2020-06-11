@@ -67,6 +67,16 @@ namespace Restaurant_Case_Groep1
                 Console.WriteLine(dish);
             }
             Console.WriteLine("----------");
+            foreach (var dish in dishesB5)
+            {
+                Console.WriteLine(dish);
+            }
+            Console.WriteLine("----------");
+            foreach (var dish in dishesB6)
+            {
+                Console.WriteLine(dish);
+            }
+            Console.WriteLine("----------");
             foreach (var dish in dishesB2)
             {
                 Console.WriteLine(dish);
@@ -78,16 +88,6 @@ namespace Restaurant_Case_Groep1
             }
             Console.WriteLine("----------");
             foreach (var dish in dishesB4)
-            {
-                Console.WriteLine(dish);
-            }
-            Console.WriteLine("----------");
-            foreach (var dish in dishesB5)
-            {
-                Console.WriteLine(dish);
-            }
-            Console.WriteLine("----------");
-            foreach (var dish in dishesB6)
             {
                 Console.WriteLine(dish);
             }

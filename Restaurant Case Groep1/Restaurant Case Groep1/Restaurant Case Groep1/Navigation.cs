@@ -54,8 +54,8 @@ namespace Restaurant_Case_Groep1
                     }
                     else 
                     {
-                        Console.WriteLine("Verkeerde inloggevens");
-                        Thread.Sleep(5000);
+                        Console.WriteLine("Verkeerde inloggegevens");
+                        Thread.Sleep(1500);
                         goto start;
                     }
 
